@@ -17,6 +17,7 @@ class CreateControlRolesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger('position_id');
             $table->unsignedInteger('group_id');
+            $table->string('email')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -94,6 +94,11 @@ class Role extends Model implements \App\Contracts\Models\Role
         return $this->position_id;
     }
 
+    public function email(): ?string
+    {
+        return $this->email;
+    }
+
     /**
      * ID of the group
      *

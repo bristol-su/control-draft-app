@@ -21,6 +21,8 @@ interface Role extends Authenticatable
      */
     public function positionId();
 
+    public function email(): ?string;
+
     /**
      * ID of the group
      *

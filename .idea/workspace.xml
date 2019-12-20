@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a1c7901-0899-4354-b0ff-584c9cc659ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/GroupTagCategoryTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/PositionTagCategoryTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/RoleTagCategoryTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/UserTagCategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/GroupTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Contracts/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contracts/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174331_create_control_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174331_create_control_roles_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +134,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -173,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576845545154</updated>
       <workItem from="1576845547227" duration="3364000" />
-      <workItem from="1576859848327" duration="4300000" />
+      <workItem from="1576859848327" duration="7752000" />
     </task>
     <servers />
   </component>
@@ -181,32 +182,36 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="693" y="311" width="494" height="512" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576864054968">
+    <state x="693" y="311" width="494" height="512" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576871513709">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="693" y="311" width="494" height="512" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576864054968" />
-    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog" timestamp="1576863503866">
+    <state x="693" y="311" width="494" height="512" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576871513709" />
+    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog" timestamp="1576870132247">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="616" y="347" width="740" height="427" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576847864003" />
-    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576863503866" />
+    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576870132247" />
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1576870389780">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1576870389780" />
     <state x="689" y="284" width="540" height="540" key="StructurePopup" timestamp="1576864113121">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="689" y="284" width="540" height="540" key="StructurePopup/0.27.1920.1053@0.27.1920.1053" timestamp="1576864113121" />
-    <state width="668" height="447" key="SwitcherDM" timestamp="1576863891468">
+    <state width="668" height="447" key="SwitcherDM" timestamp="1576872224631">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="668" height="447" key="SwitcherDM/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576848247120" />
-    <state width="668" height="447" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1576863891468" />
+    <state width="668" height="447" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1576872224631" />
     <state x="526" y="226" width="867" height="654" key="find.popup" timestamp="1576847881962">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="526" y="226" width="867" height="654" key="find.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576847881962" />
-    <state x="624" y="252" key="run.anything.popup" timestamp="1576860788233">
+    <state x="624" y="252" width="672" height="677" key="run.anything.popup" timestamp="1576872011730">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1576860788233" />
+    <state x="624" y="252" width="672" height="677" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1576872011730" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576861346443">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
