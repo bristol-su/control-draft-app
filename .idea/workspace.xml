@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a1c7901-0899-4354-b0ff-584c9cc659ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/GroupTagTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Position.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Position.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Tags/GroupTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/GroupTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/GroupTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/GroupTagCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/PositionTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/PositionTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/PositionTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/PositionTagCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/RoleTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/RoleTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/RoleTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/RoleTagCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/UserTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/UserTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/UserTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/UserTagCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_172525_create_control_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_172525_create_control_groups_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174325_create_control_positions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174325_create_control_positions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174331_create_control_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174331_create_control_roles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174337_create_control_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174337_create_control_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174426_create_control_group_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174426_create_control_group_user_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174804_create_control_role_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174804_create_control_role_user_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174806_create_control_tag_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174806_create_control_tag_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174808_create_control_taggables_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174808_create_control_taggables_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_174808_create_control_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_174808_create_control_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/Tags/GroupTagTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/GroupTagTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576845545154</updated>
       <workItem from="1576845547227" duration="3364000" />
-      <workItem from="1576859848327" duration="156000" />
+      <workItem from="1576859848327" duration="2429000" />
     </task>
     <servers />
   </component>
@@ -198,21 +181,27 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="311" width="494" height="512" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576860002605" />
-    <state x="616" y="347" width="740" height="427" key="NewPhpClassDialog" timestamp="1576847864003">
+    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog" timestamp="1576862152873">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="616" y="347" width="740" height="427" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576847864003" />
-    <state width="668" height="447" key="SwitcherDM" timestamp="1576848247120">
+    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576862152873" />
+    <state width="668" height="447" key="SwitcherDM" timestamp="1576862267164">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="668" height="447" key="SwitcherDM/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576848247120" />
+    <state width="668" height="447" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1576862267164" />
     <state x="526" y="226" width="867" height="654" key="find.popup" timestamp="1576847881962">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="526" y="226" width="867" height="654" key="find.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576847881962" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576859944869">
+    <state x="624" y="252" key="run.anything.popup" timestamp="1576860788233">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1576859944869" />
+    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1576860788233" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576861346443">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1576861346443" />
   </component>
 </project>

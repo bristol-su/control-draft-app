@@ -122,8 +122,8 @@ class GroupTag extends Model implements GroupTagContract
             Group::class,
             'taggable',
             'control_taggables',
-            'taggable_id',
-            'tag_id'
+            'tag_id',
+            'taggable_id'
         );
     }
 }
