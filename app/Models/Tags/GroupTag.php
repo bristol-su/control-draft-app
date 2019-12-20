@@ -8,6 +8,7 @@ use App\Models\Group;
 use App\Scopes\GroupTagScope;
 use App\Contracts\Models\Tags\GroupTag as GroupTagContract;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -16,6 +17,8 @@ use Illuminate\Support\Collection;
  */
 class GroupTag extends Model implements GroupTagContract
 {
+
+    use SoftDeletes;
 
     protected static function boot()
     {

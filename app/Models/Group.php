@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Tags\GroupTag;
 use App\Contracts\Models\Group as GroupContract;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -13,6 +14,8 @@ use Illuminate\Support\Collection;
  */
 class Group extends Model implements \App\Contracts\Models\Group
 {
+
+    use SoftDeletes;
 
     protected $table = 'control_groups';
 

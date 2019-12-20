@@ -4,6 +4,7 @@ namespace App\Models\Tags;
 
 use App\Scopes\GroupTagCategoryScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -12,6 +13,8 @@ use Illuminate\Support\Collection;
  */
 class GroupTagCategory extends Model implements \App\Contracts\Models\Tags\GroupTagCategory
 {
+    use SoftDeletes;
+
     protected static function boot()
     {
         parent::boot();

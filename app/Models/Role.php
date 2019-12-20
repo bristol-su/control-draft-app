@@ -5,6 +5,7 @@ namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -13,6 +14,8 @@ use Illuminate\Support\Collection;
  */
 class Role extends Model implements \App\Contracts\Models\Role
 {
+
+    use SoftDeletes;
 
     protected $table = 'control_roles';
 

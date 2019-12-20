@@ -6,6 +6,7 @@ namespace App\Models;
 
 use App\Models\Tags\GroupTag;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -14,6 +15,7 @@ use Illuminate\Support\Collection;
  */
 class Position extends Model implements \App\Contracts\Models\Position
 {
+    use SoftDeletes;
 
     protected $table = 'control_positions';
 

@@ -5,6 +5,7 @@ namespace App\Models\Tags;
 use App\Scopes\UserTagCategoryScope;
 use App\Contracts\Models\Tags\UserTagCategory as UserTagCategoryContract;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -13,6 +14,9 @@ use Illuminate\Support\Collection;
  */
 class UserTagCategory extends Model implements \App\Contracts\Models\Tags\UserTagCategory
 {
+
+    use SoftDeletes;
+
     protected static function boot()
     {
         parent::boot();

@@ -7,6 +7,7 @@ namespace App\Models;
 use App\Contracts\Models\User as UserContract;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -15,6 +16,8 @@ use Illuminate\Support\Collection;
  */
 class User extends Model implements \App\Contracts\Models\User
 {
+    use SoftDeletes;
+
     protected $table = 'control_users';
 
     protected $guarded = [];

@@ -7,6 +7,7 @@ namespace App\Models\Tags;
 use App\Models\User;
 use App\Scopes\UserTagScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -15,6 +16,9 @@ use Illuminate\Support\Collection;
  */
 class UserTag extends Model implements \App\Contracts\Models\Tags\UserTag
 {
+
+    use SoftDeletes;
+
     protected static function boot()
     {
         parent::boot();

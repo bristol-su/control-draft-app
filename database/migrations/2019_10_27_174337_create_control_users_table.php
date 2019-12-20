@@ -19,6 +19,7 @@ class CreateControlUsersTable extends Migration
             $table->string('surname');
             $table->string('email');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

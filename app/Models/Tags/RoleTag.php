@@ -7,6 +7,7 @@ namespace App\Models\Tags;
 use App\Models\Role;
 use App\Scopes\RoleTagScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -15,6 +16,8 @@ use Illuminate\Support\Collection;
  */
 class RoleTag extends Model implements \App\Contracts\Models\Tags\RoleTag
 {
+    use SoftDeletes;
+
     protected static function boot()
     {
         parent::boot();

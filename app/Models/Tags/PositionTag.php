@@ -7,6 +7,7 @@ namespace App\Models\Tags;
 use App\Models\Position;
 use App\Scopes\PositionTagScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 
 /**
@@ -15,6 +16,8 @@ use Illuminate\Support\Collection;
  */
 class PositionTag extends Model implements \App\Contracts\Models\Tags\PositionTag
 {
+    use SoftDeletes;
+
     protected static function boot()
     {
         parent::boot();
