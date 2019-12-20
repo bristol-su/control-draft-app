@@ -78,6 +78,6 @@ class UserTagCategory extends Model implements \App\Contracts\Models\Tags\UserTa
 
     public function tagRelationship()
     {
-        return $this->hasMany(UserTag::class, 'tag_category_id', 'id');
+        return $this->hasMany(UserTag::class, 'tag_category_id');
     }
 }

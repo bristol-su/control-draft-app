@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a1c7901-0899-4354-b0ff-584c9cc659ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/PositionTagTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/RoleTagTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Integration/Models/Tags/UserTagTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/PositionTagTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/RoleTagTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/UserTagTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/GroupTagCategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/PositionTagCategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/RoleTagCategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/UserTagCategoryTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/PositionTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/PositionTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/RoleTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/RoleTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags/UserTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/UserTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/Tags/GroupTagTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/Tags/GroupTagTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tags/GroupTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/GroupTagCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tags/PositionTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/PositionTagCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tags/RoleTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/RoleTagCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tags/UserTagCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tags/UserTagCategory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +130,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Integration/Models/Tags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Unit/Models/Tags" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -144,8 +141,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests/Integration/Models/Tags" />
       <recent name="$PROJECT_DIR$/tests/Unit/Models/Tags" />
+      <recent name="$PROJECT_DIR$/tests/Integration/Models/Tags" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/database/factories" />
       <recent name="$PROJECT_DIR$/database/migrations" />
@@ -180,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576845545154</updated>
       <workItem from="1576845547227" duration="3364000" />
-      <workItem from="1576859848327" duration="3224000" />
+      <workItem from="1576859848327" duration="4137000" />
     </task>
     <servers />
   </component>
@@ -192,16 +189,16 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="311" width="494" height="512" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576860002605" />
-    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog" timestamp="1576862152873">
+    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog" timestamp="1576863503866">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="616" y="347" width="740" height="427" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576847864003" />
-    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576862152873" />
-    <state width="668" height="447" key="SwitcherDM" timestamp="1576862867233">
+    <state x="616" y="347" width="943" height="434" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576863503866" />
+    <state width="668" height="447" key="SwitcherDM" timestamp="1576863891468">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="668" height="447" key="SwitcherDM/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576848247120" />
-    <state width="668" height="447" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1576862867233" />
+    <state width="668" height="447" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1576863891468" />
     <state x="526" y="226" width="867" height="654" key="find.popup" timestamp="1576847881962">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

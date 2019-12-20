@@ -76,6 +76,6 @@ class RoleTagCategory extends Model implements \App\Contracts\Models\Tags\RoleTa
 
     public function tagRelationship()
     {
-        return $this->hasMany(RoleTag::class);
+        return $this->hasMany(RoleTag::class, 'tag_category_id');
     }
 }

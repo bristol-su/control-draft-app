@@ -76,6 +76,6 @@ class GroupTagCategory extends Model implements \App\Contracts\Models\Tags\Group
 
     public function tagRelationship()
     {
-        return $this->hasMany(GroupTag::class);
+        return $this->hasMany(GroupTag::class, 'tag_category_id');
     }
 }

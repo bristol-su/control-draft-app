@@ -77,6 +77,6 @@ class PositionTagCategory extends Model implements \App\Contracts\Models\Tags\Po
 
     public function tagRelationship()
     {
-        return $this->hasMany(PositionTag::class);
+        return $this->hasMany(PositionTag::class, 'tag_category_id');
     }
 }
