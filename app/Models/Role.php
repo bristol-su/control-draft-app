@@ -4,6 +4,8 @@
 namespace App\Models;
 
 
+use App\Models\Tags\PositionTag;
+use App\Models\Tags\RoleTag;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
@@ -20,7 +22,6 @@ class Role extends Model implements \App\Contracts\Models\Role
     protected $table = 'control_roles';
 
     protected $guarded = [];
-
 
 
     /**
@@ -41,6 +42,16 @@ class Role extends Model implements \App\Contracts\Models\Role
     public function getAuthIdentifier()
     {
         return $this->id();
+    }
+
+    /**
+     * Get the ID of the role
+     *
+     * @return int
+     */
+    public function id(): int
+    {
+        return $this->id;
     }
 
     /**
@@ -165,33 +176,28 @@ class Role extends Model implements \App\Contracts\Models\Role
         return $this->tagRelationship;
     }
 
-    /**
-     * Get the ID of the role
-     *
-     * @return int
-     */
-    public function id(): int
-    {
-        return $this->id;
-    }
-
     public function positionRelationship()
     {
-        return $this->belongsTo(\App\Models\Position::class, 'position_id');
+        return $this->belongsTo(Position::class, 'position_id');
     }
 
     public function groupRelationship()
     {
-        return $this->belongsTo(\App\Models\Group::class, 'group_id');
+        return $this->belongsTo(Group::class, 'group_id');
     }
 
     public function userRelationship()
     {
-        return $this->belongsToMany(User::class, 'control_role_user');
+        return $this->belongsToMany(User::class, 'control_role_user')->withPivot(['position_name']);
     }
 
     public function tagRelationship()
     {
+        return $this->morphToMany(RoleTag::class,
+            'taggable',
+            'control_taggables',
+            'taggable_id',
+            'tag_id');
 
     }
 }
