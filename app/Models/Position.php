@@ -5,6 +5,7 @@ namespace App\Models;
 
 
 use App\Models\Tags\GroupTag;
+use App\Models\Tags\PositionTag;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
@@ -78,6 +79,10 @@ class Position extends Model implements \App\Contracts\Models\Position
 
     public function tagRelationship()
     {
-        return $this->morphToMany(GroupTag::class, 'control_taggable');
+        return $this->morphToMany(PositionTag::class,
+            'taggable',
+            'control_taggables',
+            'taggable_id',
+            'tag_id');
     }
 }
