@@ -18,16 +18,14 @@ class PositionTag extends Model implements \App\Contracts\Models\Tags\PositionTa
 {
     use SoftDeletes;
 
+    protected $table = 'control_tags';
+    protected $guarded = [];
+
     protected static function boot()
     {
         parent::boot();
         static::addGlobalScope(new PositionTagScope());
     }
-
-    protected $table = 'control_tags';
-
-    protected $guarded = [];
-
 
     /**
      * ID of the position tag
@@ -79,16 +77,6 @@ class PositionTag extends Model implements \App\Contracts\Models\Tags\PositionTa
     }
 
     /**
-     * Tag Category
-     *
-     * @return PositionTagCategory
-     */
-    public function category(): \App\Contracts\Models\Tags\PositionTagCategory
-    {
-        return $this->categoryRelationship;
-    }
-
-    /**
      * Full reference of the tag
      *
      * This should be the tag category reference and the tag reference, separated with a period.
@@ -97,6 +85,16 @@ class PositionTag extends Model implements \App\Contracts\Models\Tags\PositionTa
     public function fullReference(): string
     {
         return $this->category()->reference() . '.' . $this->reference;
+    }
+
+    /**
+     * Tag Category
+     *
+     * @return PositionTagCategory
+     */
+    public function category(): \App\Contracts\Models\Tags\PositionTagCategory
+    {
+        return $this->categoryRelationship;
     }
 
     /**
@@ -111,11 +109,12 @@ class PositionTag extends Model implements \App\Contracts\Models\Tags\PositionTa
 
     public function categoryRelationship()
     {
-        return $this->belongsTo(\App\Models\Tags\PositionTagCategory::class, 'tag_category_id');
+        return $this->belongsTo(PositionTagCategory::class, 'tag_category_id');
     }
 
     public function positionRelationship()
     {
-        return $this->morphedByMany(Position::class, 'taggable', 'control_taggables', 'taggable_id', 'tag_id');
+        return $this->morphedByMany(Position::class, 'taggable', 'control_taggables', 'tag_id',
+            'taggable_id');
     }
 }

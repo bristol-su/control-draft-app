@@ -71,7 +71,6 @@ class GroupTagTest extends TestCase
 
         $groupGroupRelationship = $groupTag->groupRelationship;
         $this->assertEquals(5, $groupGroupRelationship->count());
-        $this->assertEquals(5, $groupGroupRelationship->count());
         foreach($taggedGroups as $group) {
             $this->assertTrue($group->is($groupGroupRelationship->shift()));
         }

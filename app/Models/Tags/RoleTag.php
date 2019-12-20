@@ -18,16 +18,14 @@ class RoleTag extends Model implements \App\Contracts\Models\Tags\RoleTag
 {
     use SoftDeletes;
 
+    protected $table = 'control_tags';
+    protected $guarded = [];
+
     protected static function boot()
     {
         parent::boot();
         static::addGlobalScope(new RoleTagScope());
     }
-
-    protected $table = 'control_tags';
-
-    protected $guarded = [];
-
 
     /**
      * ID of the role tag
@@ -79,16 +77,6 @@ class RoleTag extends Model implements \App\Contracts\Models\Tags\RoleTag
     }
 
     /**
-     * Tag Category
-     *
-     * @return RoleTagCategory
-     */
-    public function category(): \App\Contracts\Models\Tags\RoleTagCategory
-    {
-        return $this->categoryRelationship;
-    }
-
-    /**
      * Full reference of the tag
      *
      * This should be the tag category reference and the tag reference, separated with a period.
@@ -97,6 +85,16 @@ class RoleTag extends Model implements \App\Contracts\Models\Tags\RoleTag
     public function fullReference(): string
     {
         return $this->category()->reference() . '.' . $this->reference;
+    }
+
+    /**
+     * Tag Category
+     *
+     * @return RoleTagCategory
+     */
+    public function category(): \App\Contracts\Models\Tags\RoleTagCategory
+    {
+        return $this->categoryRelationship;
     }
 
     /**
@@ -111,11 +109,12 @@ class RoleTag extends Model implements \App\Contracts\Models\Tags\RoleTag
 
     public function categoryRelationship()
     {
-        return $this->belongsTo(\App\Models\Tags\RoleTagCategory::class, 'tag_category_id');
+        return $this->belongsTo(RoleTagCategory::class, 'tag_category_id');
     }
 
     public function roleRelationship()
     {
-        return $this->morphedByMany(Role::class, 'taggable', 'control_taggables', 'taggable_id', 'tag_id');
+        return $this->morphedByMany(Role::class, 'taggable', 'control_taggables', 'tag_id',
+            'taggable_id');
     }
 }

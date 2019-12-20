@@ -19,16 +19,14 @@ class UserTag extends Model implements \App\Contracts\Models\Tags\UserTag
 
     use SoftDeletes;
 
+    protected $table = 'control_tags';
+    protected $guarded = [];
+
     protected static function boot()
     {
         parent::boot();
         static::addGlobalScope(new UserTagScope());
     }
-
-    protected $table = 'control_tags';
-
-    protected $guarded = [];
-
 
     /**
      * ID of the user tag
@@ -80,16 +78,6 @@ class UserTag extends Model implements \App\Contracts\Models\Tags\UserTag
     }
 
     /**
-     * Tag Category
-     *
-     * @return UserTagCategory
-     */
-    public function category(): \App\Contracts\Models\Tags\UserTagCategory
-    {
-        return $this->categoryRelationship;
-    }
-
-    /**
      * Full reference of the tag
      *
      * This should be the tag category reference and the tag reference, separated with a period.
@@ -98,6 +86,16 @@ class UserTag extends Model implements \App\Contracts\Models\Tags\UserTag
     public function fullReference(): string
     {
         return $this->category()->reference() . '.' . $this->reference;
+    }
+
+    /**
+     * Tag Category
+     *
+     * @return UserTagCategory
+     */
+    public function category(): \App\Contracts\Models\Tags\UserTagCategory
+    {
+        return $this->categoryRelationship;
     }
 
     /**
@@ -112,11 +110,12 @@ class UserTag extends Model implements \App\Contracts\Models\Tags\UserTag
 
     public function categoryRelationship()
     {
-        return $this->belongsTo(\App\Models\Tags\UserTagCategory::class, 'tag_category_id');
+        return $this->belongsTo(UserTagCategory::class, 'tag_category_id');
     }
 
     public function userRelationship()
     {
-        return $this->morphedByMany(User::class, 'taggable', 'control_taggables', 'taggable_id', 'tag_id');
+        return $this->morphedByMany(User::class, 'taggable', 'control_taggables', 'tag_id',
+            'taggable_id');
     }
 }
