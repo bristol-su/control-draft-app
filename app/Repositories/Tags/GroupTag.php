@@ -21,7 +21,7 @@ class GroupTag extends GroupTagContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return \App\Models\Tags\GroupTag::all();
     }
 
     /**
