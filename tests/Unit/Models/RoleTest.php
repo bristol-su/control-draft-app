@@ -15,6 +15,18 @@ class RoleTest extends TestCase
 {
 
     /** @test */
+    public function getAuthIdentifierName_returns_id(){
+        $group = factory(Role::class)->create();
+        $this->assertEquals('id', $group->getAuthIdentifierName());
+    }
+
+    /** @test */
+    public function getAuthIdentifier_returns_the_id(){
+        $group = factory(Role::class)->create(['id' => 2]);
+        $this->assertEquals(2, $group->getAuthIdentifier());
+    }
+
+    /** @test */
     public function tagRelationship_returns_all_tags_associated_with_the_role(){
         $roleTags = factory(RoleTag::class, 5)->create();
         $role = factory(Role::class)->create();
@@ -69,7 +81,7 @@ class RoleTest extends TestCase
         $role = factory(Role::class)->create();
 
         DB::table('control_role_user')->insert($users->map(function($user) use ($role) {
-            return ['user_id' => $user->id, 'role_id' => $role->id, 'position_name' => 'Position'];
+            return ['user_id' => $user->id, 'role_id' => $role->id];
         })->toArray());
 
         $usersThroughRole = $role->userRelationship;
@@ -84,15 +96,12 @@ class RoleTest extends TestCase
         $users = factory(User::class, 5)->make();
         $role = factory(Role::class)->create();
 
-        $role->userRelationship()->saveMany($users, $users->map(function($user) {
-            return ['position_name' => 'A Name'];
-        })->toArray());
+        $role->userRelationship()->saveMany($users);
 
         foreach($users as $user) {
             $this->assertDatabaseHas('control_role_user', [
                 'user_id' => $user->id,
                 'role_id' => $role->id,
-                'position_name' => 'A Name'
             ]);
             $this->assertDatabaseHas('control_users', $user->toArray());
         }
@@ -104,7 +113,7 @@ class RoleTest extends TestCase
         $role = factory(Role::class)->create();
 
         DB::table('control_role_user')->insert($users->map(function($user) use ($role) {
-            return ['user_id' => $user->id, 'role_id' => $role->id, 'position_name' => 'Position'];
+            return ['user_id' => $user->id, 'role_id' => $role->id];
         })->toArray());
 
         $usersThroughRole = $role->users();
@@ -157,18 +166,10 @@ class RoleTest extends TestCase
 
     /** @test */
     public function positionName_returns_the_position_name_from_the_pivot_table(){
-        $this->markTestIncomplete();
+        $position = factory(Position::class)->create(['name' => 'Position 1']);
+        $role = factory(Role::class)->create(['position_id' => $position->id]);
+
+        $this->assertEquals('Position 1', $role->positionName());
     }
 
-    /** @test */
-    public function getAuthIdentifierName_returns_id(){
-        $group = factory(Group::class)->create();
-        $this->assertEquals('id', $group->getAuthIdentifierName());
-    }
-
-    /** @test */
-    public function getAuthIdentifier_returns_the_id(){
-        $group = factory(Group::class)->create(['id' => 2]);
-        $this->assertEquals(2, $group->getAuthIdentifier());
-    }
 }

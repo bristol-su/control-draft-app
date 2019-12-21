@@ -5,6 +5,7 @@ namespace App\Models;
 
 
 use App\Contracts\Models\User as UserContract;
+use App\Models\Tags\UserTag;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -14,13 +15,14 @@ use Illuminate\Support\Collection;
  * Class User
  * @package App\Models
  */
-class User extends Model implements \App\Contracts\Models\User
+class User extends Model implements UserContract
 {
     use SoftDeletes;
 
     protected $table = 'control_users';
 
     protected $guarded = [];
+
     /**
      * Get the name of the unique identifier for the user.
      *
@@ -58,7 +60,6 @@ class User extends Model implements \App\Contracts\Models\User
      */
     public function getAuthPassword()
     {
-        // TODO: Implement getAuthPassword() method.
     }
 
     /**
@@ -68,7 +69,6 @@ class User extends Model implements \App\Contracts\Models\User
      */
     public function getRememberToken()
     {
-        // TODO: Implement getRememberToken() method.
     }
 
     /**
@@ -79,7 +79,6 @@ class User extends Model implements \App\Contracts\Models\User
      */
     public function setRememberToken($value)
     {
-        // TODO: Implement setRememberToken() method.
     }
 
     /**
@@ -89,7 +88,6 @@ class User extends Model implements \App\Contracts\Models\User
      */
     public function getRememberTokenName()
     {
-        // TODO: Implement getRememberTokenName() method.
     }
 
     /**
@@ -124,7 +122,11 @@ class User extends Model implements \App\Contracts\Models\User
 
     public function tagRelationship()
     {
-
+        return $this->morphToMany(UserTag::class,
+            'taggable',
+            'control_taggables',
+            'taggable_id',
+            'tag_id');
     }
 
     public function roleRelationship()

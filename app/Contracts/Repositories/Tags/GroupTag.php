@@ -44,7 +44,7 @@ abstract class GroupTag
      * Get a group tag by id
      *
      * @param int $id
-     * @return GroupTagModel
+     * @return \App\Contracts\Models\Tags\GroupTag
      */
     abstract public function getById(int $id): \App\Contracts\Models\Tags\GroupTag;
 

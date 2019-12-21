@@ -121,16 +121,11 @@ class Role extends Model implements \App\Contracts\Models\Role
     }
 
     /**
-     * Custom name of the position.
-     *
-     * This does not need to be the same as the actual position name. It may instead be anything you like, to allow for
-     * more granular control over the positions and roles owned by an individual, whilst not creating too many positions.
-     *
+     * Name of the position
      * @return string
      */
     public function positionName(): string
     {
-        // TODO Should return custom position name
         return $this->position()->name();
     }
 
@@ -141,7 +136,6 @@ class Role extends Model implements \App\Contracts\Models\Role
      */
     public function position(): \App\Contracts\Models\Position
     {
-        // TODO Not working
         return $this->positionRelationship;
     }
 
@@ -152,7 +146,6 @@ class Role extends Model implements \App\Contracts\Models\Role
      */
     public function group(): \App\Contracts\Models\Group
     {
-        // TODO Not working
         return $this->groupRelationship;
     }
 
@@ -188,7 +181,7 @@ class Role extends Model implements \App\Contracts\Models\Role
 
     public function userRelationship()
     {
-        return $this->belongsToMany(User::class, 'control_role_user')->withPivot(['position_name']);
+        return $this->belongsToMany(User::class, 'control_role_user');
     }
 
     public function tagRelationship()
@@ -198,6 +191,5 @@ class Role extends Model implements \App\Contracts\Models\Role
             'control_taggables',
             'taggable_id',
             'tag_id');
-
     }
 }
