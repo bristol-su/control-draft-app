@@ -8,7 +8,10 @@ use Tests\TestCase;
 
 class GroupTagCategoryTest extends TestCase
 {
-
+    // TODO Test ID method
+    // TODO Test name method
+    // TODO Test description method
+    // TODO Test reference method
     /** @test */
     public function tagRelationship_returns_all_tags_related_to_the_category(){
         $tagCategory1 = factory(GroupTagCategory::class)->create();

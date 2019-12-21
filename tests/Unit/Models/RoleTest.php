@@ -14,6 +14,12 @@ use Tests\TestCase;
 class RoleTest extends TestCase
 {
 
+    // TODO Test ID method
+    // TODO Test groupId method
+    // TODO Test positionId method
+    // TODO Test email method
+
+
     /** @test */
     public function getAuthIdentifierName_returns_id(){
         $group = factory(Role::class)->create();

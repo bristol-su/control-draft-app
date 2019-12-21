@@ -145,7 +145,6 @@ class Group extends Model implements \App\Contracts\Models\Group
 
     public function roleRelationship()
     {
-        // TODO Only return occupied roles
         return $this->hasMany(Role::class);
     }
 

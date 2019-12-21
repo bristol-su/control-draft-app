@@ -15,7 +15,10 @@ use Tests\TestCase;
 
 class RoleTagTest extends TestCase
 {
-
+    // TODO Test name method
+    // TODO Test description method
+    // TODO Test reference method
+    // TODO Test categoryId method
     /** @test */
     public function it_has_an_id_attribute(){
         $roleTag = factory(RoleTag::class)->create(['id' => 1]);

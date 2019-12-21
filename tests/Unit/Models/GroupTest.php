@@ -12,6 +12,10 @@ use Tests\TestCase;
 class GroupTest extends TestCase
 {
 
+    // TODO Test ID method
+    // TODO Test name method
+    // TODO Test email method
+
     /** @test */
     public function getAuthIdentifierName_returns_id(){
         $group = factory(Group::class)->create();

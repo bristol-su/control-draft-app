@@ -8,7 +8,10 @@ use Tests\TestCase;
 
 class PositionTagCategoryTest extends TestCase
 {
-
+    // TODO Test ID method
+    // TODO Test name method
+    // TODO Test description method
+    // TODO Test reference method
     /** @test */
     public function tagRelationship_returns_all_tags_related_to_the_category(){
         $tagCategory1 = factory(PositionTagCategory::class)->create();

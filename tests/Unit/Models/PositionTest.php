@@ -10,7 +10,9 @@ use Tests\TestCase;
 
 class PositionTest extends TestCase
 {
-
+    // TODO Test ID method
+    // TODO Test name method
+    // TODO Test description method
     /** @test */
     public function tagRelationship_returns_all_tags_the_position_has(){
         $positionTags = factory(PositionTag::class, 5)->create();

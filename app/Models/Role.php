@@ -61,7 +61,6 @@ class Role extends Model implements \App\Contracts\Models\Role
      */
     public function getAuthPassword()
     {
-        // TODO: Implement getAuthPassword() method.
     }
 
     /**
@@ -71,7 +70,6 @@ class Role extends Model implements \App\Contracts\Models\Role
      */
     public function getRememberToken()
     {
-        // TODO: Implement getRememberToken() method.
     }
 
     /**
@@ -82,7 +80,6 @@ class Role extends Model implements \App\Contracts\Models\Role
      */
     public function setRememberToken($value)
     {
-        // TODO: Implement setRememberToken() method.
     }
 
     /**
@@ -92,7 +89,6 @@ class Role extends Model implements \App\Contracts\Models\Role
      */
     public function getRememberTokenName()
     {
-        // TODO: Implement getRememberTokenName() method.
     }
 
     /**
