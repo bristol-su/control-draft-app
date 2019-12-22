@@ -20,7 +20,7 @@ class Group extends GroupContract
      */
     public function getById(int $id): GroupModel
     {
-        // TODO: Implement getById() method.
+        return App\Models\GroupContract::where('id', $id)->get()->first();
     }
 
     /**
@@ -28,6 +28,6 @@ class Group extends GroupContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\GroupContract::all();
     }
 }

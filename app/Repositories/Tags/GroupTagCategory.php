@@ -21,7 +21,7 @@ class GroupTagCategory extends GroupTagCategoryContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\Tags\GroupTagCategory::all();
     }
 
     /**
@@ -29,7 +29,7 @@ class GroupTagCategory extends GroupTagCategoryContract
      */
     public function getByReference(string $reference): GroupTagCategoryModel
     {
-        // TODO: Implement getByReference() method.
+        return App\Models\Tags\GroupTagCategory::where('reference', $reference)->get()->first();
     }
 
     /**
@@ -37,6 +37,6 @@ class GroupTagCategory extends GroupTagCategoryContract
      */
     public function getById(int $id): GroupTagCategoryModel
     {
-        // TODO: Implement getById() method.
+        return App\Models\Tags\GroupTagCategory::where('id', $id)->get()->first();
     }
 }

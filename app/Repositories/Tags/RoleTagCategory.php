@@ -20,7 +20,7 @@ class RoleTagCategory extends RoleTagCategoryContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\Tags\RoleTagCategory::all();
     }
 
     /**
@@ -28,7 +28,7 @@ class RoleTagCategory extends RoleTagCategoryContract
      */
     public function getByReference(string $reference): RoleTagCategoryModel
     {
-        // TODO: Implement getByReference() method.
+        return App\Models\Tags\RoleTagCategory::where('reference', $reference)->get()->first();
     }
 
     /**
@@ -36,6 +36,6 @@ class RoleTagCategory extends RoleTagCategoryContract
      */
     public function getById(int $id): RoleTagCategoryModel
     {
-        // TODO: Implement getById() method.
+        return App\Models\Tags\RoleTagCategory::where('id', $id)->get()->first();
     }
 }

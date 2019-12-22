@@ -29,7 +29,7 @@ class GroupTag extends GroupTagContract
      */
     public function getTagByFullReference(string $reference): \App\Contracts\Models\Tags\GroupTag
     {
-        // TODO: Implement getTagByFullReference() method.
+        return \App\Models\Tags\GroupTag::where('reference', $reference)->get()->first();
     }
 
     /**
@@ -37,6 +37,6 @@ class GroupTag extends GroupTagContract
      */
     public function getById(int $id): \App\Contracts\Models\Tags\GroupTag
     {
-        // TODO: Implement getById() method.
+        return \App\Models\Tags\GroupTag::where('id', $id)->get()->first();
     }
 }

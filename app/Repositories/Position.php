@@ -21,7 +21,7 @@ class Position extends PositionContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\PositionContract::all();
     }
 
     /**
@@ -29,6 +29,6 @@ class Position extends PositionContract
      */
     public function getById(int $id): \App\Contracts\Models\Position
     {
-        // TODO: Implement getById() method.
+        return App\Models\PositionContract::where('id', $id)->get()->first();
     }
 }

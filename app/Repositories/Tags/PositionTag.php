@@ -21,7 +21,7 @@ class PositionTag extends PositionTagContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\Tags\PositionTag::all();
     }
 
     /**
@@ -29,7 +29,7 @@ class PositionTag extends PositionTagContract
      */
     public function getTagByFullReference(string $reference): PositionTagModel
     {
-        // TODO: Implement getTagByFullReference() method.
+        return App\Models\Tags\PositionTag::where('reference', $reference)->get()->first();
     }
 
     /**
@@ -37,6 +37,6 @@ class PositionTag extends PositionTagContract
      */
     public function getById(int $id): PositionTagModel
     {
-        // TODO: Implement getById() method.
+        return App\Models\Tags\PositionTag::where('id', $id)->get()->first();
     }
 }

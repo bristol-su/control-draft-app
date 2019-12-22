@@ -20,7 +20,7 @@ class UserTagCategory extends UserTagCategoryContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\Tags\UserTagCategory::all();
     }
 
     /**
@@ -28,7 +28,7 @@ class UserTagCategory extends UserTagCategoryContract
      */
     public function getByReference(string $reference): UserTagCategoryModel
     {
-        // TODO: Implement getByReference() method.
+        return App\Models\Tags\UserTagCategory::where('reference', $reference)->get()->first();
     }
 
     /**
@@ -36,6 +36,6 @@ class UserTagCategory extends UserTagCategoryContract
      */
     public function getById(int $id): UserTagCategoryModel
     {
-        // TODO: Implement getById() method.
+        return App\Models\Tags\UserTagCategory::where('id', $id)->get()->first();
     }
 }

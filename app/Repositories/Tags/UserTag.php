@@ -21,7 +21,7 @@ class UserTag extends UserTagContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\Tags\UserTag::all();
     }
 
     /**
@@ -29,7 +29,7 @@ class UserTag extends UserTagContract
      */
     public function getTagByFullReference(string $reference): UserTagModel
     {
-        // TODO: Implement getTagByFullReference() method.
+        return App\Models\Tags\UserTag::where('reference', $reference)->get()->first();
     }
 
     /**
@@ -37,6 +37,6 @@ class UserTag extends UserTagContract
      */
     public function getById(int $id): UserTagModel
     {
-        // TODO: Implement getById() method.
+        return App\Models\Tags\UserTag::where('id', $id)->get()->first();
     }
 }

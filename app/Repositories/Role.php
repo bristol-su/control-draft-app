@@ -27,7 +27,7 @@ class Role extends RoleContract
      */
     public function getById($id): \App\Contracts\Models\Role
     {
-        // TODO: Implement getById() method.
+        return App\Models\Role::where('id', $id)->get()->first();
     }
 
     /**
@@ -35,6 +35,6 @@ class Role extends RoleContract
      */
     public function all(): Collection
     {
-        // TODO: Implement all() method.
+        return App\Models\Role::all();
     }
 }
