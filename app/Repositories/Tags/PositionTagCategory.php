@@ -21,7 +21,7 @@ class PositionTagCategory extends PositionTagCategoryContract
      */
     public function all(): Collection
     {
-        return App\Models\Tags\PositionTagCategory::all();
+        return \App\Models\Tags\PositionTagCategory::all();
     }
 
     /**
@@ -29,7 +29,7 @@ class PositionTagCategory extends PositionTagCategoryContract
      */
     public function getByReference(string $reference): PositionTagCategoryModel
     {
-        return App\Models\Tags\PositionTagCategory::where('reference', $reference)->get()->first();
+        return \App\Models\Tags\PositionTagCategory::where('reference', $reference)->get()->firstOrFail();
     }
 
     /**
@@ -37,6 +37,6 @@ class PositionTagCategory extends PositionTagCategoryContract
      */
     public function getById(int $id): PositionTagCategoryModel
     {
-        return App\Models\Tags\PositionTagCategory::where('id', $id)->get()->first();
+        return \App\Models\Tags\PositionTagCategory::where('id', $id)->get()->firstOrFail();
     }
 }

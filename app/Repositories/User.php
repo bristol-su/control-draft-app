@@ -23,7 +23,7 @@ class User extends UserContract
      */
     public function getById(int $id): UserModelContract
     {
-        return App\Models\User::where('id', $id)->get()->first();
+        return \App\Models\User::where('id', $id)->get()->firstOrFail();
     }
 
     /**
@@ -31,7 +31,7 @@ class User extends UserContract
      */
     public function all(): Collection
     {
-        return App\Models\User::all();
+        return \App\Models\User::all();
     }
 
     /**
@@ -39,8 +39,10 @@ class User extends UserContract
      */
     public function create(string $forename, string $surname, string $email): UserModelContract
     {
+        //// validation to be moved to the controller
+
         // check that email is not already registered
-        if (is_null(App\Models\User::where('email', $email)->get()->first())) 
+        /*if (is_null(App\Models\User::where('email', $email)->get()->first())) 
         {
             // check entries are valid
             $validator = Validator::make(
@@ -60,7 +62,7 @@ class User extends UserContract
                 return $validator->messages();
             }
             else
-            {
+            {*/
                 // validation has passed, create the new user entry
                 $new_user = new App\Models\User;
                 $new_user->forename = $forename;
@@ -68,12 +70,12 @@ class User extends UserContract
                 $new_user->email = $email;
                 $new_user->save();
 
-                return "Success"; // temporary response
-            }
+                return $new_user;
+            /*}
         }
         else
         {
             return "Email already registered"; // temporary response
-        }
+        }*/
     }
 }

@@ -17,7 +17,7 @@ class CreateControlUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('forename');
             $table->string('surname');
-            $table->unique()->string('email');
+            $table->string('email')->unique(); // fixed error
             $table->timestamps();
             $table->softDeletes();
         });
