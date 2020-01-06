@@ -4,7 +4,7 @@ $factory->define(\App\Models\Tags\GroupTagCategory::class, function(\Faker\Gener
     return [
         'name' => $faker->word,
         'description' => $faker->paragraph,
-        'reference' => $faker->word,
+        'reference' => $faker->unique()->word,
         'type' => 'group'
     ];
 });
@@ -13,7 +13,7 @@ $factory->define(\App\Models\Tags\UserTagCategory::class, function(\Faker\Genera
     return [
         'name' => $faker->word,
         'description' => $faker->paragraph,
-        'reference' => $faker->word,
+        'reference' => $faker->unique()->word,
         'type' => 'user'
     ];
 });
@@ -22,7 +22,7 @@ $factory->define(\App\Models\Tags\RoleTagCategory::class, function(\Faker\Genera
     return [
         'name' => $faker->word,
         'description' => $faker->paragraph,
-        'reference' => $faker->word,
+        'reference' => $faker->unique()->word,
         'type' => 'role'
     ];
 });
@@ -31,7 +31,7 @@ $factory->define(\App\Models\Tags\PositionTagCategory::class, function(\Faker\Ge
     return [
         'name' => $faker->word,
         'description' => $faker->paragraph,
-        'reference' => $faker->word,
+        'reference' => $faker->unique()->word,
         'type' => 'position'
     ];
 });

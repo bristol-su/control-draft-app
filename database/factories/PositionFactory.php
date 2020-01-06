@@ -2,7 +2,7 @@
 
 $factory->define(\App\Models\Position::class, function(\Faker\Generator $faker) {
     return [
-        'name' => $faker->company,
+        'name' => $faker->unique()->company,
         'description' => $faker->paragraph
     ];
 });
