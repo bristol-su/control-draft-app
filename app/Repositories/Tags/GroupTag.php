@@ -29,19 +29,18 @@ class GroupTag extends GroupTagContract
      */
     public function getTagByFullReference(string $reference): \App\Contracts\Models\Tags\GroupTag
     {
-        /*$full_ref = explode('.', $reference);
+        $full_ref = explode('.', $reference);
         $category_ref = $full_ref[0];
         $tag_ref = $full_ref[1];
 
         // get category id
-        try {
-            $category_id = \App\Models\Tags\GroupTag::where('reference', $reference)->get()->firstOrFail()->id;
+        $category = \App\Models\Tags\GroupTagCategory::where('reference', $category_ref)->firstOrFail();
+        $category_id = $category->id;
 
-        } catch (ModelNotFoundException $e) {
-            // no category exists with this reference
-        }*/
+        // get the tag
+        $tag = \App\Models\Tags\GroupTag::where('tag_category_id', $category_id)->firstOrFail();
 
-        return \App\Models\Tags\GroupTag::where('reference', $reference)->firstOrFail();
+        return $tag;
     }
 
     /**
