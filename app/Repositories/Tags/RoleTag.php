@@ -29,7 +29,7 @@ class RoleTag extends RoleTagContract
      */
     public function getTagByFullReference(string $reference): RoleTagModel
     {
-        return \App\Models\Tags\RoleTag::where('reference', $reference)->get()->firstOrFail();
+        return \App\Models\Tags\RoleTag::where('reference', $reference)->firstOrFail();
     }
 
     /**
@@ -37,6 +37,6 @@ class RoleTag extends RoleTagContract
      */
     public function getById(int $id): RoleTagModel
     {
-        return \App\Models\Tags\RoleTag::where('id', $id)->get()->firstOrFail();
+        return \App\Models\Tags\RoleTag::where('id', $id)->firstOrFail();
     }
 }

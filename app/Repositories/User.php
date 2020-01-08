@@ -23,7 +23,7 @@ class User extends UserContract
      */
     public function getById(int $id): UserModelContract
     {
-        return \App\Models\User::where('id', $id)->get()->firstOrFail();
+        return \App\Models\User::where('id', $id)->firstOrFail();
     }
 
     /**
@@ -64,7 +64,7 @@ class User extends UserContract
             else
             {*/
                 // validation has passed, create the new user entry
-                $new_user = new App\Models\User;
+                $new_user = new \App\Models\User;
                 $new_user->forename = $forename;
                 $new_user->surname = $surname;
                 $new_user->email = $email;

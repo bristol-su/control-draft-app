@@ -30,7 +30,7 @@ class GroupTagCategoryTest extends TestCase
 
     /** @test */
     public function all_returns_all_group_tags_categories(){
-        $groupTagCategories = factory(GroupTag::class, 15)->create();
+        $groupTagCategories = factory(GroupTagCategory::class, 15)->create();
         $groupTagCategoryRepo = new \App\Repositories\Tags\GroupTagCategory();
         $allTagCategories = $groupTagCategoryRepo->all();
         $this->assertInstanceOf(Collection::class, $allTagCategories);

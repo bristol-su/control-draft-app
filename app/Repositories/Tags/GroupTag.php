@@ -41,7 +41,7 @@ class GroupTag extends GroupTagContract
             // no category exists with this reference
         }*/
 
-        return \App\Models\Tags\GroupTag::where('reference', $reference)->get()->firstOrFail();
+        return \App\Models\Tags\GroupTag::where('reference', $reference)->firstOrFail();
     }
 
     /**
@@ -49,6 +49,6 @@ class GroupTag extends GroupTagContract
      */
     public function getById(int $id): \App\Contracts\Models\Tags\GroupTag
     {
-        return \App\Models\Tags\GroupTag::where('id', $id)->get()->firstOrFail();
+        return \App\Models\Tags\GroupTag::where('id', $id)->firstOrFail();
     }
 }

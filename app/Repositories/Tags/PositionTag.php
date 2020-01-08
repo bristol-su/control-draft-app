@@ -29,7 +29,7 @@ class PositionTag extends PositionTagContract
      */
     public function getTagByFullReference(string $reference): PositionTagModel
     {
-        return \App\Models\Tags\PositionTag::where('reference', $reference)->get()->firstOrFail();
+        return \App\Models\Tags\PositionTag::where('reference', $reference)->firstOrFail();
     }
 
     /**
@@ -37,6 +37,6 @@ class PositionTag extends PositionTagContract
      */
     public function getById(int $id): PositionTagModel
     {
-        return \App\Models\Tags\PositionTag::where('id', $id)->get()->firstOrFail();
+        return \App\Models\Tags\PositionTag::where('id', $id)->firstOrFail();
     }
 }

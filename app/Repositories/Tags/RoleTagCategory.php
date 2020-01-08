@@ -28,7 +28,7 @@ class RoleTagCategory extends RoleTagCategoryContract
      */
     public function getByReference(string $reference): RoleTagCategoryModel
     {
-        return \App\Models\Tags\RoleTagCategory::where('reference', $reference)->get()->firstOrFail();
+        return \App\Models\Tags\RoleTagCategory::where('reference', $reference)->firstOrFail();
     }
 
     /**
@@ -36,6 +36,6 @@ class RoleTagCategory extends RoleTagCategoryContract
      */
     public function getById(int $id): RoleTagCategoryModel
     {
-        return \App\Models\Tags\RoleTagCategory::where('id', $id)->get()->firstOrFail();
+        return \App\Models\Tags\RoleTagCategory::where('id', $id)->firstOrFail();
     }
 }

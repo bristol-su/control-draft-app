@@ -28,7 +28,7 @@ class UserTagCategory extends UserTagCategoryContract
      */
     public function getByReference(string $reference): UserTagCategoryModel
     {
-        return \App\Models\Tags\UserTagCategory::where('reference', $reference)->get()->firstOrFail();
+        return \App\Models\Tags\UserTagCategory::where('reference', $reference)->firstOrFail();
     }
 
     /**
@@ -36,6 +36,6 @@ class UserTagCategory extends UserTagCategoryContract
      */
     public function getById(int $id): UserTagCategoryModel
     {
-        return \App\Models\Tags\UserTagCategory::where('id', $id)->get()->firstOrFail();
+        return \App\Models\Tags\UserTagCategory::where('id', $id)->firstOrFail();
     }
 }
