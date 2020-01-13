@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\Group;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\Group\StoreGroupRequest;
+use App\Http\Requests\Api\Group\StoreUserRequest;
 use BristolSU\ControlDB\Contracts\Models\Group;
 use BristolSU\ControlDB\Contracts\Repositories\DataGroup as DataGroupRepository;
 use BristolSU\ControlDB\Contracts\Repositories\Group as GroupRepository;
@@ -21,7 +21,7 @@ class GroupController extends Controller
         return $group;
     }
 
-    public function store(StoreGroupRequest $request, GroupRepository $groupRepository, DataGroupRepository $dataGroupRepository)
+    public function store(StoreUserRequest $request, GroupRepository $groupRepository, DataGroupRepository $dataGroupRepository)
     {
         $dataGroup = $dataGroupRepository->create(
             $request->input('name'),
@@ -31,7 +31,7 @@ class GroupController extends Controller
         return $groupRepository->create($dataGroup->id());
     }
 
-    public function update(Group $group, StoreGroupRequest $request, GroupRepository $groupRepository, DataGroupRepository $dataGroupRepository)
+    public function update(Group $group, StoreUserRequest $request, GroupRepository $groupRepository, DataGroupRepository $dataGroupRepository)
     {
         $dataGroup = $group->data();
         if($request->input('name') !== null) {

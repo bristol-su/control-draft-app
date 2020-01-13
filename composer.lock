@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e85b88b5f04dd20f24a033ff69ad65c",
+    "content-hash": "f3689b3e9da60848ac9843146509523b",
     "packages": [
         {
             "name": "brianium/habitat",
@@ -114,10 +114,16 @@
         {
             "name": "bristol-su/control",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bristol-su/control.git",
+                "reference": "c7362b7c1eb859a1aead34baf5dc27eaf2fae63f"
+            },
             "dist": {
-                "type": "path",
-                "url": "../control",
-                "reference": "384260349bccfb3088a4798658ff55bd533c6eaf"
+                "type": "zip",
+                "url": "https://api.github.com/repos/bristol-su/control/zipball/c7362b7c1eb859a1aead34baf5dc27eaf2fae63f",
+                "reference": "c7362b7c1eb859a1aead34baf5dc27eaf2fae63f",
+                "shasum": ""
             },
             "require": {
                 "orchestra/testbench": "^4.0",
@@ -141,11 +147,7 @@
                     "database/factories"
                 ]
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Tests\\ControlDB\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -155,7 +157,8 @@
                     "email": "tt15951@my.bristol.ac.uk"
                 }
             ],
-            "description": "An implementation of the control contracts"
+            "description": "An implementation of the control contracts",
+            "time": "2020-01-13T21:26:05+00:00"
         },
         {
             "name": "bristol-su/support",
@@ -4314,12 +4317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "da6fcde1775739f723272696a76edc73b6046e8d"
+                "reference": "eb1645bc7226d41096f5c77e1e67a48e1d09c4df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/da6fcde1775739f723272696a76edc73b6046e8d",
-                "reference": "da6fcde1775739f723272696a76edc73b6046e8d",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/eb1645bc7226d41096f5c77e1e67a48e1d09c4df",
+                "reference": "eb1645bc7226d41096f5c77e1e67a48e1d09c4df",
                 "shasum": ""
             },
             "require": {
@@ -4393,7 +4396,7 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2020-01-08T22:47:00+00:00"
+            "time": "2020-01-13T16:49:53+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
