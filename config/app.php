@@ -39,6 +39,8 @@ return [
     |
     */
 
+    'api_url' => env('API_URL'),
+
     'debug' => env('APP_DEBUG', false),
 
     /*
