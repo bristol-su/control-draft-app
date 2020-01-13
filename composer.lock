@@ -117,7 +117,7 @@
             "dist": {
                 "type": "path",
                 "url": "../control",
-                "reference": "5487eb999086545b5d6023e6291c9dfe1d5069ec"
+                "reference": "384260349bccfb3088a4798658ff55bd533c6eaf"
             },
             "require": {
                 "orchestra/testbench": "^4.0",
@@ -1748,12 +1748,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "899aa66925a4181e6f14454bd0504fcce49e5b78"
+                "reference": "2103eb7ccfbb6798e9078d82e0ebffcf87d95b14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/899aa66925a4181e6f14454bd0504fcce49e5b78",
-                "reference": "899aa66925a4181e6f14454bd0504fcce49e5b78",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2103eb7ccfbb6798e9078d82e0ebffcf87d95b14",
+                "reference": "2103eb7ccfbb6798e9078d82e0ebffcf87d95b14",
                 "shasum": ""
             },
             "require": {
@@ -1887,7 +1887,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-01-13T10:58:53+00:00"
+            "time": "2020-01-13T17:11:04+00:00"
         },
         {
             "name": "laravel/passport",

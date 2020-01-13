@@ -7,6 +7,7 @@ import BootstrapVue from 'bootstrap-vue';
 
 // Import Vue Components
 import GroupIndex from './components/group/index/Index';
+import GroupShow from './components/group/show/Show';
 
 
 
@@ -18,7 +19,7 @@ if (token) {
 }
 Vue.prototype.$notify = new AWN({position: 'top-right'});
 Vue.prototype.$http = axios;
-Vue.prototype.$api = new api(apiUrl, axios);
+Vue.prototype.$control = new api(apiUrl, axios);
 Vue.use(BootstrapVue);
 
 
@@ -27,6 +28,7 @@ new Vue({
     el: '#control-vue-root',
     components: {
         // Add additional components here
-        GroupIndex
+        GroupIndex,
+        GroupShow
     }
 });

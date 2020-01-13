@@ -14,5 +14,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::namespace('Pages')->group(function() {
-    Route::resource('group', 'GroupController')->only(['index']);
+    Route::get('/group', 'GroupController@index');
+    Route::get('/group/{control_group}', 'GroupController@show');
 });

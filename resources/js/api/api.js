@@ -1,4 +1,5 @@
 import Group from './resources/group';
+import User from './resources/user';
 
 // TODO Implement Cache
 export default class {
@@ -14,5 +15,9 @@ export default class {
 
     group() {
         return new Group(this._http);
+    }
+
+    user() {
+        return new User(this._http);
     }
 }

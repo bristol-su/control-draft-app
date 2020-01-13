@@ -16,4 +16,5 @@
 
 @push('styles')
     <link rel="stylesheet" type="text/css" href="{{ asset('control/css/control.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
 @endpush
