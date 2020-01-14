@@ -87812,59 +87812,27 @@ function (_BaseResource) {
     key: "all",
     value: function all() {
       return this.request('get', '/user');
-    } // delete(groupId) {
-    //     return this.request('delete', '/group/' + groupId);
-    // }
-    //
-    // get(groupId) {
-    //     return this.request('get', '/group/' + groupId);
-    // }
-    //
-    // update(groupId, attributes) {
-    //     return this.request('patch', '/group/' + groupId, attributes);
-    // }
-    //
-    // create(attributes) {
-    //     return this.request('post', '/group', attributes);
-    // }
-    //
-    // tags(groupId) {
-    //     return this.request('get', '/group/' + groupId + '/tag');
-    // }
-    //
-    // tag(groupId, tagId) {
-    //     return this.request('patch', '/group/' + groupId + '/tag/' + tagId);
-    // }
-    //
-    // untag(groupId, tagId) {
-    //     return this.request('delete', '/group/' + groupId + '/tag/' + tagId);
-    // }
-    //
-    // users(groupId) {
-    //     return this.request('get', '/group/' + groupId + '/user');
-    //
-    // }
-    //
-    // addUser(groupId, userId) {
-    //     return this.request('patch', '/group/' + groupId + '/user/' + userId);
-    //
-    // }
-    //
-    // removeUser(groupId, userId) {
-    //     return this.request('delete', '/group/' + groupId + '/user/' + userId);
-    //
-    // }
-    //
-    // roles(groupId) {
-    //     return this.request('get', '/group/' + groupId + '/role');
-    //
-    // }
-    //
-    // addRole(groupId, roleId) {
-    //     return this.request('patch', '/group/' + groupId + '/role/' + roleId);
-    //
-    // }
-
+    }
+  }, {
+    key: "delete",
+    value: function _delete(userId) {
+      return this.request('delete', '/user/' + userId);
+    }
+  }, {
+    key: "get",
+    value: function get(userId) {
+      return this.request('get', '/user/' + userId);
+    }
+  }, {
+    key: "update",
+    value: function update(userId, attributes) {
+      return this.request('patch', '/user/' + userId, attributes);
+    }
+  }, {
+    key: "create",
+    value: function create(attributes) {
+      return this.request('post', '/user', attributes);
+    }
   }]);
 
   return _default;
@@ -88707,8 +88675,8 @@ new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/toby/development/bristolsu/portal/support/control-draft-app/resources/js/control.js */"./resources/js/control.js");
-module.exports = __webpack_require__(/*! /home/toby/development/bristolsu/portal/support/control-draft-app/resources/sass/control.scss */"./resources/sass/control.scss");
+__webpack_require__(/*! /home/tt15951/development/portal/support/control-draft-app/resources/js/control.js */"./resources/js/control.js");
+module.exports = __webpack_require__(/*! /home/tt15951/development/portal/support/control-draft-app/resources/sass/control.scss */"./resources/sass/control.scss");
 
 
 /***/ })
