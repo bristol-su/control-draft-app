@@ -24,5 +24,8 @@ Route::namespace('Api')->group(function() {
 
     Route::namespace('User')->group(function() {
         Route::apiResource('user', 'UserController')->parameter('user', 'control_user');
+        Route::apiResource('user.tag', 'UserUserTagController')->only(['index', 'update', 'destroy'])->parameters(['user' => 'control_user', 'tag' => 'control_user_tag']);
+        Route::apiResource('user.role', 'UserRoleController')->only(['index', 'update', 'destroy'])->parameters(['user' => 'control_user', 'role' => 'control_role']);
+        Route::apiResource('user.group', 'UserGroupController')->only(['index', 'update', 'destroy'])->parameters(['user' => 'control_user', 'group' => 'control_group']);
     });
 });

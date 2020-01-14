@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3689b3e9da60848ac9843146509523b",
+    "content-hash": "8e85b88b5f04dd20f24a033ff69ad65c",
     "packages": [
         {
             "name": "brianium/habitat",
@@ -114,16 +114,10 @@
         {
             "name": "bristol-su/control",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bristol-su/control.git",
-                "reference": "d5a9779d30f189f81ade594ddc9c7b31d18f553c"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/control/zipball/d5a9779d30f189f81ade594ddc9c7b31d18f553c",
-                "reference": "d5a9779d30f189f81ade594ddc9c7b31d18f553c",
-                "shasum": ""
+                "type": "path",
+                "url": "../control",
+                "reference": "d5a9779d30f189f81ade594ddc9c7b31d18f553c"
             },
             "require": {
                 "orchestra/testbench": "^4.0",
@@ -147,7 +141,11 @@
                     "database/factories"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "BristolSU\\Tests\\ControlDB\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -157,8 +155,7 @@
                     "email": "tt15951@my.bristol.ac.uk"
                 }
             ],
-            "description": "An implementation of the control contracts",
-            "time": "2020-01-13T22:57:48+00:00"
+            "description": "An implementation of the control contracts"
         },
         {
             "name": "bristol-su/support",

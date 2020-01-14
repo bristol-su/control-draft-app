@@ -15,9 +15,9 @@ use BristolSU\ControlDB\Contracts\Models\Group;
 use BristolSU\ControlDB\Contracts\Models\Position;
 use BristolSU\ControlDB\Contracts\Models\Role;
 use BristolSU\ControlDB\Contracts\Models\User;
-use BristolSU\Support\Control\Contracts\Models\Tags\RoleTag;
-use BristolSU\Support\Control\Contracts\Repositories\Tags\RoleTag as RoleTagRepository;
-use BristolSU\Support\Control\Contracts\Repositories\Tags\UserTag as UserTagRepository;
+use BristolSU\ControlDB\Contracts\Models\Tags\RoleTag;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\RoleTag as RoleTagRepository;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\UserTag as UserTagRepository;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
