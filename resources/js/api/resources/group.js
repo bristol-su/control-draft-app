@@ -54,9 +54,4 @@ export default class extends BaseResource{
 
     }
 
-    addRole(groupId, roleId) {
-        return this.request('patch', '/group/' + groupId + '/role/' + roleId);
-
-    }
-
 }

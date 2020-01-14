@@ -14,9 +14,4 @@ class GroupRoleController extends Controller
         return $group->roles();
     }
 
-    public function update(Group $group, Role $role)
-    {
-        return $role->setGroupId($group->id());
-    }
-
 }

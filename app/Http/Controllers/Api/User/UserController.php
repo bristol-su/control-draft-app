@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\User;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\User\StoreUserRequest;
+use App\Http\Requests\Api\User\StoreRoleRequest;
 use BristolSU\ControlDB\Contracts\Repositories\DataUser as DataUserRepository;
 use BristolSU\ControlDB\Contracts\Repositories\User as UserRepository;
 use BristolSU\ControlDB\Contracts\Models\User;
@@ -20,7 +20,7 @@ class UserController extends Controller
         return $user;
     }
 
-    public function store(StoreUserRequest $request, UserRepository $userRepository, DataUserRepository $dataUserRepository)
+    public function store(StoreRoleRequest $request, UserRepository $userRepository, DataUserRepository $dataUserRepository)
     {
         $dataUser = $dataUserRepository->create(
             $request->input('first_name'),
@@ -33,7 +33,7 @@ class UserController extends Controller
         return $userRepository->create($dataUser->id());
     }
 
-    public function update(User $user, StoreUserRequest $request, UserRepository $userRepository, DataUserRepository $dataUserRepository)
+    public function update(User $user, StoreRoleRequest $request, UserRepository $userRepository, DataUserRepository $dataUserRepository)
     {
         $dataUser = $user->data();
 

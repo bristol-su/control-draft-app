@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e85b88b5f04dd20f24a033ff69ad65c",
+    "content-hash": "f3689b3e9da60848ac9843146509523b",
     "packages": [
         {
             "name": "brianium/habitat",
@@ -114,10 +114,16 @@
         {
             "name": "bristol-su/control",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bristol-su/control.git",
+                "reference": "3b0ab0cd6c14a42c523f09d5f20aa84722757b82"
+            },
             "dist": {
-                "type": "path",
-                "url": "../control",
-                "reference": "d5a9779d30f189f81ade594ddc9c7b31d18f553c"
+                "type": "zip",
+                "url": "https://api.github.com/repos/bristol-su/control/zipball/3b0ab0cd6c14a42c523f09d5f20aa84722757b82",
+                "reference": "3b0ab0cd6c14a42c523f09d5f20aa84722757b82",
+                "shasum": ""
             },
             "require": {
                 "orchestra/testbench": "^4.0",
@@ -141,11 +147,7 @@
                     "database/factories"
                 ]
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Tests\\ControlDB\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -155,7 +157,8 @@
                     "email": "tt15951@my.bristol.ac.uk"
                 }
             ],
-            "description": "An implementation of the control contracts"
+            "description": "An implementation of the control contracts",
+            "time": "2020-01-14T11:40:44+00:00"
         },
         {
             "name": "bristol-su/support",
@@ -228,12 +231,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "c6bea70230ef4dd483e6bbcab6005f682ed3a8de"
+                "reference": "39da74948fd424cf0e8321b96f04c2a1b2480a15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/c6bea70230ef4dd483e6bbcab6005f682ed3a8de",
-                "reference": "c6bea70230ef4dd483e6bbcab6005f682ed3a8de",
+                "url": "https://api.github.com/repos/composer/semver/zipball/39da74948fd424cf0e8321b96f04c2a1b2480a15",
+                "reference": "39da74948fd424cf0e8321b96f04c2a1b2480a15",
                 "shasum": ""
             },
             "require": {
@@ -281,7 +284,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2020-01-13T12:06:48+00:00"
+            "time": "2020-01-14T12:12:58+00:00"
         },
         {
             "name": "defuse/php-encryption",
