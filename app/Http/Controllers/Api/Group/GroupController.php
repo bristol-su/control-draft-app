@@ -46,7 +46,7 @@ class GroupController extends Controller
 
     public function destroy(Group $group, GroupRepository $groupRepository)
     {
-        $groupRepository->delete($group->id());
+        $groupRepository->delete((int) $group->id());
     }
 
 }

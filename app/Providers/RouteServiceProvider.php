@@ -3,13 +3,15 @@
 namespace App\Providers;
 
 use BristolSU\ControlDB\Contracts\Models\Tags\GroupTag;
+use BristolSU\ControlDB\Contracts\Models\Tags\GroupTagCategory;
 use BristolSU\ControlDB\Contracts\Models\Tags\PositionTag;
+use BristolSU\ControlDB\Contracts\Models\Tags\PositionTagCategory;
+use BristolSU\ControlDB\Contracts\Models\Tags\RoleTagCategory;
 use BristolSU\ControlDB\Contracts\Models\Tags\UserTag;
+use BristolSU\ControlDB\Contracts\Models\Tags\UserTagCategory;
 use BristolSU\ControlDB\Contracts\Repositories\Group as GroupRepository;
 use BristolSU\ControlDB\Contracts\Repositories\Position as PositionRepository;
 use BristolSU\ControlDB\Contracts\Repositories\Role as RoleRepository;
-use BristolSU\ControlDB\Contracts\Repositories\Tags\GroupTag as GroupTagRepository;
-use BristolSU\ControlDB\Contracts\Repositories\Tags\PositionTag as PositionTagRepository;
 use BristolSU\ControlDB\Contracts\Repositories\User as UserRepository;
 use BristolSU\ControlDB\Contracts\Models\Group;
 use BristolSU\ControlDB\Contracts\Models\Position;
@@ -18,6 +20,12 @@ use BristolSU\ControlDB\Contracts\Models\User;
 use BristolSU\ControlDB\Contracts\Models\Tags\RoleTag;
 use BristolSU\ControlDB\Contracts\Repositories\Tags\RoleTag as RoleTagRepository;
 use BristolSU\ControlDB\Contracts\Repositories\Tags\UserTag as UserTagRepository;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\GroupTag as GroupTagRepository;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\PositionTag as PositionTagRepository;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\RoleTagCategory as RoleTagCategoryRepository;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\UserTagCategory as UserTagCategoryRepository;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\GroupTagCategory as GroupTagCategoryRepository;
+use BristolSU\ControlDB\Contracts\Repositories\Tags\PositionTagCategory as PositionTagCategoryRepository;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +62,10 @@ class RouteServiceProvider extends ServiceProvider
         Route::model('control_role_tag', RoleTag::class);
         Route::model('control_user_tag', UserTag::class);
         Route::model('control_position_tag', PositionTag::class);
+        Route::model('control_group_tag_category', GroupTagCategory::class);
+        Route::model('control_role_tag_category', RoleTagCategory::class);
+        Route::model('control_user_tag_category', UserTagCategory::class);
+        Route::model('control_position_tag_category', PositionTagCategory::class);
 
         Route::bind('control_group', function($id) {
             return app(GroupRepository::class)->getById($id);
@@ -79,6 +91,19 @@ class RouteServiceProvider extends ServiceProvider
         });
         Route::bind('control_position_tag', function($id) {
             return app(PositionTagRepository::class)->getById($id);
+        });
+
+        Route::bind('control_group_tag_category', function($id) {
+            return app(GroupTagCategoryRepository::class)->getById($id);
+        });
+        Route::bind('control_role_tag_category', function($id) {
+            return app(RoleTagCategoryRepository::class)->getById($id);
+        });
+        Route::bind('control_user_tag_category', function($id) {
+            return app(UserTagCategoryRepository::class)->getById($id);
+        });
+        Route::bind('control_position_tag_category', function($id) {
+            return app(PositionTagCategoryRepository::class)->getById($id);
         });
 
         parent::boot();

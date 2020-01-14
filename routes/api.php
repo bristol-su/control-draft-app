@@ -36,4 +36,16 @@ Route::namespace('Api')->group(function() {
         Route::apiResource('role.group', 'RoleGroupController')->only(['index'])->parameters(['role' => 'control_role']);
         Route::apiResource('role.position', 'RolePositionController')->only(['index'])->parameters(['role' => 'control_role']);
     });
+
+    Route::namespace('UserTag')->group(function() {
+        Route::apiResource('user-tag', 'UserTagController')->parameters(['user-tag' => 'control_user_tag']);
+        Route::apiResource('user-tag.user', 'UserTagUserController')->only(['index', 'update', 'destroy'])->parameters(['user-tag' => 'control_user_tag', 'user' => 'control_user']);
+        Route::apiResource('user-tag.user-tag-category', 'UserTagUserTagCategoryController')->only(['index'])->parameters(['user-tag' => 'control_user_tag', 'user-tag-category' => 'control_user_tag_category']);
+    });
+
+    Route::namespace('UserTagCategory')->group(function() {
+        Route::apiResource('user-tag-category', 'UserTagCategoryController')->parameters(['user-tag-category' => 'control_user_tag_category']);
+        Route::apiResource('user-tag-category.user-tag', 'UserTagCategoryUserTagController')->only(['index'])->parameters(['user-tag-category' => 'control_user_tag_category']);
+    });
+
 });

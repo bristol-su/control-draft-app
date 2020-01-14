@@ -59,7 +59,7 @@ class UserController extends Controller
 
     public function destroy(User $user, UserRepository $userRepository)
     {
-        $userRepository->delete($user->id());
+        $userRepository->delete((int) $user->id());
     }
 
 

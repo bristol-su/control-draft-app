@@ -55,7 +55,7 @@ class RoleController extends Controller
 
     public function destroy(Role $role, RoleRepository $roleRepository)
     {
-        $roleRepository->delete($role->id());
+        $roleRepository->delete((int) $role->id());
     }
 
 
