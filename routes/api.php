@@ -37,6 +37,13 @@ Route::namespace('Api')->group(function() {
         Route::apiResource('role.position', 'RolePositionController')->only(['index'])->parameters(['role' => 'control_role']);
     });
 
+    Route::namespace('Position')->group(function() {
+        Route::apiResource('position', 'PositionController')->parameter('control_position');
+        Route::apiResource('position.tag', 'PositionTagController')->only(['index', 'update', 'destroy'])->
+            parameters(['position' => 'control_position', 'tag' => 'control_position_tag']);
+        Route::apiResource('position.role', 'PositionRoleController')->only(['index'])->parameters(['position' => 'position_role']);
+    });
+
     Route::namespace('UserTag')->group(function() {
         Route::apiResource('user-tag', 'UserTagController')->parameters(['user-tag' => 'control_user_tag']);
         Route::apiResource('user-tag.user', 'UserTagUserController')->only(['index', 'update', 'destroy'])->parameters(['user-tag' => 'control_user_tag', 'user' => 'control_user']);
