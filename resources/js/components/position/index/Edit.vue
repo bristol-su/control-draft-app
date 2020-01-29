@@ -15,7 +15,7 @@
                 label="Description:"
                 label-for="description"
                 v-model="form.description"
-                description="Enter a description"
+                description="Provide a description for the position"
             >
                 <b-form-input
                     id="description"
@@ -45,7 +45,7 @@
         watch: {
             position: {
                 handler: function() {
-                    this.syncGroupAttributes();
+                    this.syncPositionAttributes();
                 },
                 deep: true
             }
@@ -54,14 +54,14 @@
         data() {
             return {
                 form: {
-                    name: null,
-                    description: null
+                    description: null,
+                    name: null
                 }
             }
         },
 
         mounted() {
-            this.syncGroupAttributes();
+            this.syncPositionAttributes();
         },
 
         methods: {
@@ -69,7 +69,7 @@
                 if(this.position !== null) {
                     this.form.description = this.position.data.description;
                     this.form.name = this.position.data.name;
-                }
+                } 
             },
 
             savePosition() {

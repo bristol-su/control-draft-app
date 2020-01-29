@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
-use BristolSU\ControlDB\Contracts\Models\Group;
+use BristolSU\ControlDB\Contracts\Models\Position;
 
 class PositionController extends Controller
 {

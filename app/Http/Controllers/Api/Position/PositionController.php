@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api\Position;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\Position\StorePositionRequest;
+use App\Http\Requests\Api\Position\UpdatePositionRequest;
 use BristolSU\ControlDB\Contracts\Models\Position;
 use BristolSU\ControlDB\Contracts\Repositories\DataPosition as DataPositionRepository;
 use BristolSU\ControlDB\Contracts\Repositories\Position as PositionRepository;

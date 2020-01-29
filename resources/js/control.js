@@ -10,7 +10,7 @@ import GroupIndex from './components/group/index/Index';
 import GroupShow from './components/group/show/Show';
 
 import PositionIndex from './components/position/index/Index';
-//import PositionShow from './components/position/show/Show';
+import PositionShow from './components/position/show/Show';
 
 
 window._ = _;
@@ -33,7 +33,7 @@ new Vue({
         GroupIndex,
         GroupShow,
 
-        PositionIndex
-        //PositionShow
+        PositionIndex,
+        PositionShow
     }
 });

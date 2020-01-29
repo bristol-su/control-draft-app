@@ -12,7 +12,7 @@
                         <template v-slot:cell(actions)="data">
                             <b-button size="sm" variant="outline-info" @click="editPosition(data.item)">Edit</b-button>
                             <a :href="'/position/' + data.item.id"><b-button size="sm" variant="outline-secondary">View</b-button></a>
-                            <b-button size="sm" variant="outline-danger" @click="deletePosition(data.item)">Position</b-button>
+                            <b-button size="sm" variant="outline-danger" @click="deletePosition(data.item)">Delete</b-button>
                         </template>
                     </b-table>
                 </b-col>
