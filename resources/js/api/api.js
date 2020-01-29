@@ -1,6 +1,7 @@
 import Group from './resources/group';
 import User from './resources/user';
 import Role from './resources/role';
+import Position from './resources/position';
 
 import UserTag from './resources/user-tag';
 import GroupTag from './resources/group-tag';
@@ -33,6 +34,10 @@ export default class {
 
     role() {
         return new Role(this._http);
+    }
+
+    position() {
+        return new Position(this._http);
     }
 
     userTag() {

@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::namespace('Pages')->group(function() {
     Route::get('/group', 'GroupController@index');
     Route::get('/group/{control_group}', 'GroupController@show');
+
+    Route::get('/position', 'PositionController@index');
+    Route::get('/position/{control_position}', 'PositionController@show');
 });
