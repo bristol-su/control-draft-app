@@ -12,6 +12,8 @@ import GroupShow from './components/group/show/Show';
 import PositionIndex from './components/position/index/Index';
 import PositionShow from './components/position/show/Show';
 
+import RoleIndex from './components/role/index/Index';
+
 
 window._ = _;
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -34,6 +36,8 @@ new Vue({
         GroupShow,
 
         PositionIndex,
-        PositionShow
+        PositionShow,
+
+        RoleIndex
     }
 });

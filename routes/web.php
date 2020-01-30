@@ -19,4 +19,7 @@ Route::namespace('Pages')->group(function() {
 
     Route::get('/position', 'PositionController@index');
     Route::get('/position/{control_position}', 'PositionController@show');
+
+    Route::get('/role', 'RoleController@index');
+    Route::get('/role/{control_role}', 'RoleController@show');
 });
