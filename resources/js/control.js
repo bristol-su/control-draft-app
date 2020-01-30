@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import axios from 'axios';
 import Vue from 'vue';
-import api from './api/api';
+import api from '@bristol-su/control-js-api-client';
 import AWN from "awesome-notifications";
 import BootstrapVue from 'bootstrap-vue';
 

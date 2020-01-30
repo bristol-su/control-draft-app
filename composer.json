@@ -9,8 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "bristol-su/control": "dev-master",
-        "bristol-su/support": "dev-master",
+        "bristol-su/control": "^1.0",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
@@ -47,7 +46,7 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": false,
+    "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
