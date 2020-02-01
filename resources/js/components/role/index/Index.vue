@@ -20,7 +20,7 @@
         </b-container>
 
         <b-modal id="edit-role">
-            <edit :group="editingRole" @input="updatedRole"></edit>
+            <edit :role="editingRole" @input="updatedRole"></edit>
         </b-modal>
     </div>
 </template>
@@ -51,7 +51,7 @@
         created() {
             this.$control.role().all()
                 .then(response => this.roles = response.data)
-                .catch(error => this.$notify.alert('Could not load roles'))
+                .catch(error => this.$notify.alert('Could not load roles'));
         },
 
         methods: {

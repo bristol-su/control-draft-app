@@ -20,7 +20,7 @@
         </b-container>
 
         <b-modal id="edit-position">
-            <edit :group="editingPosition" @input="updatedPosition"></edit>
+            <edit :position="editingPosition" @input="updatedPosition"></edit>
         </b-modal>
     </div>
 </template>

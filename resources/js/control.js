@@ -13,6 +13,7 @@ import PositionIndex from './components/position/index/Index';
 import PositionShow from './components/position/show/Show';
 
 import RoleIndex from './components/role/index/Index';
+import RoleShow from './components/role/show/Show';
 
 
 window._ = _;
@@ -38,6 +39,7 @@ new Vue({
         PositionIndex,
         PositionShow,
 
-        RoleIndex
+        RoleIndex,
+        RoleShow
     }
 });

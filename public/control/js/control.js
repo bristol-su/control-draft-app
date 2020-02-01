@@ -86,6 +86,804 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@bristol-su/control-js-api-client/baseresource.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/baseresource.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (class {
+
+    constructor(client) {
+        this._client = client;
+    }
+
+    request(method, url, body, params)
+    {
+        return this._client.request({
+            url: url,
+            method: method,
+            data: body,
+            params: params,
+        })
+    }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/index.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/index.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _resources_group__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./resources/group */ "./node_modules/@bristol-su/control-js-api-client/resources/group.js");
+/* harmony import */ var _resources_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./resources/user */ "./node_modules/@bristol-su/control-js-api-client/resources/user.js");
+/* harmony import */ var _resources_role__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./resources/role */ "./node_modules/@bristol-su/control-js-api-client/resources/role.js");
+/* harmony import */ var _resources_position__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./resources/position */ "./node_modules/@bristol-su/control-js-api-client/resources/position.js");
+/* harmony import */ var _resources_user_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./resources/user-tag */ "./node_modules/@bristol-su/control-js-api-client/resources/user-tag.js");
+/* harmony import */ var _resources_group_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./resources/group-tag */ "./node_modules/@bristol-su/control-js-api-client/resources/group-tag.js");
+/* harmony import */ var _resources_role_tag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./resources/role-tag */ "./node_modules/@bristol-su/control-js-api-client/resources/role-tag.js");
+/* harmony import */ var _resources_position_tag__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./resources/position-tag */ "./node_modules/@bristol-su/control-js-api-client/resources/position-tag.js");
+/* harmony import */ var _resources_user_tag_category__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./resources/user-tag-category */ "./node_modules/@bristol-su/control-js-api-client/resources/user-tag-category.js");
+/* harmony import */ var _resources_group_tag_category__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./resources/group-tag-category */ "./node_modules/@bristol-su/control-js-api-client/resources/group-tag-category.js");
+/* harmony import */ var _resources_role_tag_category__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./resources/role-tag-category */ "./node_modules/@bristol-su/control-js-api-client/resources/role-tag-category.js");
+/* harmony import */ var _resources_position_tag_category__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./resources/position-tag-category */ "./node_modules/@bristol-su/control-js-api-client/resources/position-tag-category.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TODO Implement Cache
+/* harmony default export */ __webpack_exports__["default"] = (class {
+    constructor(baseUrl, axios) {
+        this._http = axios.create({
+            baseURL: baseUrl,
+            withCredentials: true,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+            }
+        });
+    }
+
+    group() {
+        return new _resources_group__WEBPACK_IMPORTED_MODULE_0__["default"](this._http);
+    }
+
+    user() {
+        return new _resources_user__WEBPACK_IMPORTED_MODULE_1__["default"](this._http);
+    }
+
+    role() {
+        return new _resources_role__WEBPACK_IMPORTED_MODULE_2__["default"](this._http);
+    }
+
+    position() {
+        return new _resources_position__WEBPACK_IMPORTED_MODULE_3__["default"](this._http);
+    }
+
+    userTag() {
+        return new _resources_user_tag__WEBPACK_IMPORTED_MODULE_4__["default"](this._http);
+    }
+
+    groupTag() {
+        return new _resources_group_tag__WEBPACK_IMPORTED_MODULE_5__["default"](this._http);
+    }
+
+    roleTag() {
+        return new _resources_role_tag__WEBPACK_IMPORTED_MODULE_6__["default"](this._http);
+    }
+
+    positionTag() {
+        return new _resources_position_tag__WEBPACK_IMPORTED_MODULE_7__["default"](this._http);
+    }
+
+    userTagCategory() {
+        return new _resources_user_tag_category__WEBPACK_IMPORTED_MODULE_8__["default"](this._http);
+    }
+
+    groupTagCategory() {
+        return new _resources_group_tag_category__WEBPACK_IMPORTED_MODULE_9__["default"](this._http);
+    }
+
+    roleTagCategory() {
+        return new _resources_role_tag_category__WEBPACK_IMPORTED_MODULE_10__["default"](this._http);
+    }
+
+    positionTagCategory() {
+        return new _resources_position_tag_category__WEBPACK_IMPORTED_MODULE_11__["default"](this._http);
+    }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/group-tag-category.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/group-tag-category.js ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/group-tag-category');
+    }
+
+    delete(groupTagCategoryId) {
+        return this.request('delete', '/group-tag-category/' + groupTagCategoryId);
+    }
+
+    get(groupTagCategoryId) {
+        return this.request('get', '/group-tag-category/' + groupTagCategoryId);
+    }
+
+    update(groupTagCategoryId, attributes) {
+        return this.request('patch', '/group-tag-category/' + groupTagCategoryId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/group-tag-category', attributes);
+    }
+
+    tags(groupTagCategoryId) {
+        return this.request('get', '/group-tag-category/' + groupTagCategoryId + '/group-tag');
+    }
+
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/group-tag.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/group-tag.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/group-tag');
+    }
+
+    delete(groupTagId) {
+        return this.request('delete', '/group-tag/' + groupTagId);
+    }
+
+    get(groupTagId) {
+        return this.request('get', '/group-tag/' + groupTagId);
+    }
+
+    update(groupTagId, attributes) {
+        return this.request('patch', '/group-tag/' + groupTagId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/group-tag', attributes);
+    }
+
+    groups(groupTagId) {
+        return this.request('get', '/group-tag/' + groupTagId + '/group');
+    }
+
+    tagGroup(groupTagId, groupId) {
+        return this.request('patch', '/group-tag/' + groupTagId + '/group/' + groupId);
+    }
+
+    untagGroup(groupTagId, groupId) {
+        return this.request('delete', '/group-tag/' + groupTagId + '/group/' + groupId);
+    }
+
+    category(groupTagId) {
+        return this.request('get', '/group-tag/' + groupTagId + '/group-tag-category');
+    }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/group.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/group.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/group');
+    }
+
+    delete(groupId) {
+        return this.request('delete', '/group/' + groupId);
+    }
+
+    get(groupId) {
+        return this.request('get', '/group/' + groupId);
+    }
+
+    update(groupId, attributes) {
+        return this.request('patch', '/group/' + groupId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/group', attributes);
+    }
+
+    tags(groupId) {
+        return this.request('get', '/group/' + groupId + '/tag');
+    }
+
+    tag(groupId, tagId) {
+        return this.request('patch', '/group/' + groupId + '/tag/' + tagId);
+    }
+
+    untag(groupId, tagId) {
+        return this.request('delete', '/group/' + groupId + '/tag/' + tagId);
+    }
+
+    users(groupId) {
+        return this.request('get', '/group/' + groupId + '/user');
+
+    }
+
+    addUser(groupId, userId) {
+        return this.request('patch', '/group/' + groupId + '/user/' + userId);
+
+    }
+
+    removeUser(groupId, userId) {
+        return this.request('delete', '/group/' + groupId + '/user/' + userId);
+
+    }
+
+    roles(groupId) {
+        return this.request('get', '/group/' + groupId + '/role');
+
+    }
+
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/position-tag-category.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/position-tag-category.js ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/position-tag-category');
+    }
+
+    delete(positionTagCategoryId) {
+        return this.request('delete', '/position-tag-category/' + positionTagCategoryId);
+    }
+
+    get(positionTagCategoryId) {
+        return this.request('get', '/position-tag-category/' + positionTagCategoryId);
+    }
+
+    update(positionTagCategoryId, attributes) {
+        return this.request('patch', '/position-tag-category/' + positionTagCategoryId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/position-tag-category', attributes);
+    }
+
+    tags(positionTagCategoryId) {
+        return this.request('get', '/position-tag-category/' + positionTagCategoryId + '/position-tag');
+    }
+
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/position-tag.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/position-tag.js ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/position-tag');
+    }
+
+    delete(positionTagId) {
+        return this.request('delete', '/position-tag/' + positionTagId);
+    }
+
+    get(positionTagId) {
+        return this.request('get', '/position-tag/' + positionTagId);
+    }
+
+    update(positionTagId, attributes) {
+        return this.request('patch', '/position-tag/' + positionTagId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/position-tag', attributes);
+    }
+
+    positions(positionTagId) {
+        return this.request('get', '/position-tag/' + positionTagId + '/position');
+    }
+
+    tagPosition(positionTagId, positionId) {
+        return this.request('patch', '/position-tag/' + positionTagId + '/position/' + positionId);
+    }
+
+    untagPosition(positionTagId, positionId) {
+        return this.request('delete', '/position-tag/' + positionTagId + '/position/' + positionId);
+    }
+
+    category(positionTagId) {
+        return this.request('get', '/position-tag/' + positionTagId + '/position-tag-category');
+    }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/position.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/position.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/position');
+    }
+
+    delete(positionId) {
+        return this.request('delete', '/position/' + positionId);
+    }
+
+    get(positionId) {
+        return this.request('get', '/position/' + positionId);
+    }
+
+    update(positionId, attributes) {
+        return this.request('patch', '/position/' + positionId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/position', attributes);
+    }
+
+    tags(positionId) {
+        return this.request('get', '/position/' + positionId + '/tag');
+    }
+
+    tag(positionId, tagId) {
+        return this.request('patch', '/position/' + positionId + '/tag/' + tagId);
+    }
+
+    untag(positionId, tagId) {
+        return this.request('delete', '/position/' + positionId + '/tag/' + tagId);
+    }
+
+    roles(positionId) {
+        return this.request('get', '/position/' + positionId + '/role');
+
+    }
+
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/role-tag-category.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/role-tag-category.js ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/role-tag-category');
+    }
+
+    delete(roleTagCategoryId) {
+        return this.request('delete', '/role-tag-category/' + roleTagCategoryId);
+    }
+
+    get(roleTagCategoryId) {
+        return this.request('get', '/role-tag-category/' + roleTagCategoryId);
+    }
+
+    update(roleTagCategoryId, attributes) {
+        return this.request('patch', '/role-tag-category/' + roleTagCategoryId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/role-tag-category', attributes);
+    }
+
+    tags(roleTagCategoryId) {
+        return this.request('get', '/role-tag-category/' + roleTagCategoryId + '/role-tag');
+    }
+
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/role-tag.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/role-tag.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/role-tag');
+    }
+
+    delete(roleTagId) {
+        return this.request('delete', '/role-tag/' + roleTagId);
+    }
+
+    get(roleTagId) {
+        return this.request('get', '/role-tag/' + roleTagId);
+    }
+
+    update(roleTagId, attributes) {
+        return this.request('patch', '/role-tag/' + roleTagId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/role-tag', attributes);
+    }
+
+    roles(roleTagId) {
+        return this.request('get', '/role-tag/' + roleTagId + '/role');
+    }
+
+    tagRole(roleTagId, roleId) {
+        return this.request('patch', '/role-tag/' + roleTagId + '/role/' + roleId);
+    }
+
+    untagRole(roleTagId, roleId) {
+        return this.request('delete', '/role-tag/' + roleTagId + '/role/' + roleId);
+    }
+
+    category(roleTagId) {
+        return this.request('get', '/role-tag/' + roleTagId + '/role-tag-category');
+    }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/role.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/role.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/role');
+    }
+
+    delete(roleId) {
+        return this.request('delete', '/role/' + roleId);
+    }
+
+    get(roleId) {
+        return this.request('get', '/role/' + roleId);
+    }
+
+    update(roleId, attributes) {
+        return this.request('patch', '/role/' + roleId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/role', attributes);
+    }
+
+    tags(roleId) {
+        return this.request('get', '/role/' + roleId + '/tag');
+    }
+
+    tag(roleId, tagId) {
+        return this.request('patch', '/role/' + roleId + '/tag/' + tagId);
+    }
+
+    untag(roleId, tagId) {
+        return this.request('delete', '/role/' + roleId + '/tag/' + tagId);
+    }
+
+    users(roleId) {
+        return this.request('get', '/role/' + roleId + '/user');
+
+    }
+
+    addUser(roleId, userId) {
+        return this.request('patch', '/role/' + roleId + '/user/' + userId);
+
+    }
+
+    removeUser(roleId, userId) {
+        return this.request('delete', '/role/' + roleId + '/user/' + userId);
+
+    }
+
+    group(roleId) {
+        return this.request('get', '/role/' + roleId + '/group');
+    }
+
+    position(roleId) {
+        return this.request('get', '/role/' + roleId + '/position');
+    }
+
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/user-tag-category.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/user-tag-category.js ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/user-tag-category');
+    }
+
+    delete(userTagCategoryId) {
+        return this.request('delete', '/user-tag-category/' + userTagCategoryId);
+    }
+
+    get(userTagCategoryId) {
+        return this.request('get', '/user-tag-category/' + userTagCategoryId);
+    }
+
+    update(userTagCategoryId, attributes) {
+        return this.request('patch', '/user-tag-category/' + userTagCategoryId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/user-tag-category', attributes);
+    }
+
+    tags(userTagCategoryId) {
+        return this.request('get', '/user-tag-category/' + userTagCategoryId + '/user-tag');
+    }
+
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/user-tag.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/user-tag.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/user-tag');
+    }
+
+    delete(userTagId) {
+        return this.request('delete', '/user-tag/' + userTagId);
+    }
+
+    get(userTagId) {
+        return this.request('get', '/user-tag/' + userTagId);
+    }
+
+    update(userTagId, attributes) {
+        return this.request('patch', '/user-tag/' + userTagId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/user-tag', attributes);
+    }
+
+    users(userTagId) {
+        return this.request('get', '/user-tag/' + userTagId + '/user');
+    }
+
+    tagUser(userTagId, userId) {
+        return this.request('patch', '/user-tag/' + userTagId + '/user/' + userId);
+    }
+
+    untagUser(userTagId, userId) {
+        return this.request('delete', '/user-tag/' + userTagId + '/user/' + userId);
+    }
+
+    category(userTagId) {
+        return this.request('get', '/user-tag/' + userTagId + '/user-tag-category');
+    }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/@bristol-su/control-js-api-client/resources/user.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@bristol-su/control-js-api-client/resources/user.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./node_modules/@bristol-su/control-js-api-client/baseresource.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (class extends _baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]{
+
+    all() {
+        return this.request('get', '/user');
+    }
+
+    delete(userId) {
+        return this.request('delete', '/user/' + userId);
+    }
+
+    get(userId) {
+        return this.request('get', '/user/' + userId);
+    }
+
+    update(userId, attributes) {
+        return this.request('patch', '/user/' + userId, attributes);
+    }
+
+    create(attributes) {
+        return this.request('post', '/user', attributes);
+    }
+
+    tags(userId) {
+        return this.request('get', '/user/' + userId + '/tag');
+    }
+
+    tag(userId, tagId) {
+        return this.request('patch', '/user/' + userId + '/tag/' + tagId);
+    }
+
+    untag(userId, tagId) {
+        return this.request('delete', '/user/' + userId + '/tag/' + tagId);
+    }
+
+    roles(userId) {
+        return this.request('get', '/user/' + userId + '/role');
+
+    }
+
+    addRole(userId, roleId) {
+        return this.request('patch', '/user/' + userId + '/role/' + roleId);
+
+    }
+
+    removeRole(userId, roleId) {
+        return this.request('delete', '/user/' + userId + '/role/' + roleId);
+
+    }
+
+    groups(userId) {
+        return this.request('get', '/user/' + userId + '/group');
+
+    }
+
+    addGroup(userId, groupId) {
+        return this.request('patch', '/user/' + userId + '/group/' + groupId);
+
+    }
+
+    removeGroup(userId, groupId) {
+        return this.request('delete', '/user/' + userId + '/group/' + groupId);
+
+    }
+
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/awesome-notifications/dist/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/awesome-notifications/dist/index.js ***!
@@ -2631,8 +3429,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Edit",
   props: {
@@ -2985,6 +3781,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GroupIdSelector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GroupIdSelector */ "./resources/js/components/role/index/GroupIdSelector.vue");
 //
 //
 //
@@ -3016,8 +3813,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Edit",
+  components: {
+    GroupIdSelector: _GroupIdSelector__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   props: {
     role: {
       type: Object,
@@ -3037,7 +3840,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       form: {
         position_id: null,
-        group_id: null
+        position_name: null,
+        group_id: null,
+        email: null
       }
     };
   },
@@ -3075,6 +3880,88 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return _this2.$notify.alert('Could not save the role.');
       });
+    },
+    newGroupId: function newGroupId(event) {
+      this.form.group_id = event; //this.form.
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/index/GroupIdSelector.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/index/GroupIdSelector.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Group-Id-Selector",
+  props: {
+    value: {
+      type: Number,
+      required: false,
+      "default": 0
+    }
+  },
+  watch: {
+    value: {
+      handler: function handler() {
+        this.syncValue();
+      },
+      deep: true
+    }
+  },
+  data: function data() {
+    return {
+      group_selected: null,
+      groups: []
+    };
+  },
+  mounted: function mounted() {
+    this.syncValue();
+  },
+  created: function created() {
+    var _this = this;
+
+    this.$control.group().all().then(function (response) {
+      return _this.groups = response.data;
+    })["catch"](function (error) {
+      return _this.$notify.alert('Could not load groups');
+    });
+  },
+  methods: {
+    syncValue: function syncValue() {
+      if (this.value !== 0) {
+        this.group_selected = this.value;
+      }
+    },
+    onChange: function onChange(event) {
+      /*id_data = [
+      	'id' => event,
+      	'email' =>
+      ]
+      console.log(event);*/
+      this.$emit('input', event);
     }
   }
 });
@@ -3192,6 +4079,145 @@ __webpack_require__.r(__webpack_exports__);
       this.editingRole = null;
     }
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/RoleDetails.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/show/RoleDetails.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_DataItem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utilities/DataItem */ "./resources/js/components/utilities/DataItem.vue");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Details",
+  components: {
+    DataItem: _utilities_DataItem__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    role: {
+      required: true,
+      type: Object
+    }
+  },
+  data: function data() {
+    return {};
+  },
+  filters: {
+    dateTime: function dateTime(val) {
+      return moment__WEBPACK_IMPORTED_MODULE_1___default()(val).format('D-MM-Y H:mm');
+    }
+  },
+  methods: {},
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Show.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/show/Show.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _RoleDetails__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RoleDetails */ "./resources/js/components/role/show/RoleDetails.vue");
+/* harmony import */ var _Tags__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tags */ "./resources/js/components/role/show/Tags.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/*import Roles from './Roles';*/
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Show",
+  components: {
+    RoleDetails: _RoleDetails__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Tags: _Tags__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  props: {
+    role: {
+      required: true,
+      type: Object
+    }
+  },
+  data: function data() {
+    return {};
+  },
+  methods: {},
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Tags.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/show/Tags.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Tags",
+  props: {
+    role: {
+      required: true,
+      type: Object
+    }
+  },
+  data: function data() {
+    return {};
+  },
+  filters: {
+    dateTime: function dateTime(val) {
+      return moment__WEBPACK_IMPORTED_MODULE_0___default()(val).format('D-MM-Y H:mm');
+    }
+  },
+  methods: {},
+  computed: {}
 });
 
 /***/ }),
@@ -75975,10 +77001,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972& ***!
-  \**********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -76037,22 +77063,13 @@ var render = function() {
               attrs: {
                 id: "position-description-group",
                 label: "Description:",
-                "label-for": "description",
-                description: "Provide a description for the position"
-              },
-              model: {
-                value: _vm.form.description,
-                callback: function($$v) {
-                  _vm.$set(_vm.form, "description", $$v)
-                },
-                expression: "form.description"
+                "label-for": "position-description"
               }
             },
             [
               _c("b-form-input", {
                 attrs: {
-                  id: "description",
-                  type: "text",
+                  id: "position-description",
                   placeholder: "Enter a description"
                 },
                 model: {
@@ -76218,7 +77235,7 @@ var render = function() {
         { attrs: { id: "edit-position" } },
         [
           _c("edit", {
-            attrs: { group: _vm.editingPosition },
+            attrs: { position: _vm.editingPosition },
             on: { input: _vm.updatedPosition }
           })
         ],
@@ -76419,6 +77436,39 @@ var render = function() {
           }
         },
         [
+          _c("group-id-selector", {
+            attrs: { value: _vm.form.group_id },
+            on: {
+              input: function($event) {
+                return _vm.newGroupId($event)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "b-form-group",
+            {
+              attrs: {
+                id: "group-id-group",
+                label: "Group ID:",
+                "label-for": "groupid"
+              }
+            },
+            [
+              _c("b-form-input", {
+                attrs: { id: "groupid", type: "number", disabled: "disabled" },
+                model: {
+                  value: _vm.form.group_id,
+                  callback: function($$v) {
+                    _vm.$set(_vm.form, "group_id", $$v)
+                  },
+                  expression: "form.group_id"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
           _c(
             "b-form-group",
             {
@@ -76432,40 +77482,11 @@ var render = function() {
               _c("b-form-input", {
                 attrs: { id: "positionid", placeholder: "Enter position id" },
                 model: {
-                  value: _vm.form.positionid,
+                  value: _vm.form.position_id,
                   callback: function($$v) {
-                    _vm.$set(_vm.form, "positionid", $$v)
+                    _vm.$set(_vm.form, "position_id", $$v)
                   },
-                  expression: "form.positionid"
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-group",
-            {
-              attrs: {
-                id: "group-id-group",
-                label: "Group ID:",
-                "label-for": "groupid",
-                description: "Enter group id"
-              }
-            },
-            [
-              _c("b-form-input", {
-                attrs: {
-                  id: "groupid",
-                  type: "number",
-                  placeholder: "Enter group id"
-                },
-                model: {
-                  value: _vm.form.groupid,
-                  callback: function($$v) {
-                    _vm.$set(_vm.form, "groupid", $$v)
-                  },
-                  expression: "form.groupid"
+                  expression: "form.position_id"
                 }
               })
             ],
@@ -76475,6 +77496,70 @@ var render = function() {
           _c("b-button", { attrs: { type: "submit", variant: "primary" } }, [
             _vm._v("Submit")
           ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/index/GroupIdSelector.vue?vue&type=template&id=517b8a64&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/index/GroupIdSelector.vue?vue&type=template&id=517b8a64& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "b-form-group",
+        { attrs: { id: "group-group", label: "Group:", "label-for": "group" } },
+        [
+          _c(
+            "b-form-select",
+            {
+              attrs: { id: "group" },
+              on: {
+                change: function($event) {
+                  return _vm.onChange($event)
+                }
+              },
+              model: {
+                value: _vm.group_selected,
+                callback: function($$v) {
+                  _vm.group_selected = $$v
+                },
+                expression: "group_selected"
+              }
+            },
+            _vm._l(_vm.groups, function(item) {
+              return _c("option", { domProps: { value: item.data.id } }, [
+                _vm._v(
+                  "\n            \t\t" +
+                    _vm._s(item.data.name) +
+                    "\n            \t"
+                )
+              ])
+            }),
+            0
+          )
         ],
         1
       )
@@ -76623,7 +77708,7 @@ var render = function() {
         { attrs: { id: "edit-role" } },
         [
           _c("edit", {
-            attrs: { group: _vm.editingRole },
+            attrs: { role: _vm.editingRole },
             on: { input: _vm.updatedRole }
           })
         ],
@@ -76632,6 +77717,137 @@ var render = function() {
     ],
     1
   )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/show/RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("data-item", { attrs: { title: "Id" } }, [
+        _vm._v(_vm._s(_vm.role.id))
+      ]),
+      _vm._v(" "),
+      _c("data-item", { attrs: { title: "Position Name" } }, [
+        _vm._v(_vm._s(_vm.role.data.position_name))
+      ]),
+      _vm._v(" "),
+      _c("data-item", { attrs: { title: "Group Email" } }, [
+        _vm._v(_vm._s(_vm.role.data.email))
+      ]),
+      _vm._v(" "),
+      _c("data-item", { attrs: { title: "Last Updated" } }, [
+        _vm._v(_vm._s(_vm._f("dateTime")(_vm.role.updated_at)))
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Show.vue?vue&type=template&id=4a4b8ebe&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/show/Show.vue?vue&type=template&id=4a4b8ebe&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-container",
+    [
+      _c(
+        "b-card",
+        { attrs: { "no-body": "" } },
+        [
+          _c(
+            "b-tabs",
+            { attrs: { pills: "", card: "", vertical: "" } },
+            [
+              _c(
+                "b-tab",
+                { attrs: { title: "Role Details", active: "" } },
+                [_c("role-details", { attrs: { role: _vm.role } })],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-tab",
+                { attrs: { title: "Tags" } },
+                [_c("tags", { attrs: { role: _vm.role } })],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-tab",
+                { attrs: { title: "Users" } },
+                [_c("users", { attrs: { role: _vm.role } })],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Tags.vue?vue&type=template&id=7adeb886&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/role/show/Tags.vue?vue&type=template&id=7adeb886&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div")
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -88832,1327 +90048,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/js/api/api.js":
-/*!*********************************!*\
-  !*** ./resources/js/api/api.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _resources_group__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./resources/group */ "./resources/js/api/resources/group.js");
-/* harmony import */ var _resources_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./resources/user */ "./resources/js/api/resources/user.js");
-/* harmony import */ var _resources_role__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./resources/role */ "./resources/js/api/resources/role.js");
-/* harmony import */ var _resources_position__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./resources/position */ "./resources/js/api/resources/position.js");
-/* harmony import */ var _resources_user_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./resources/user-tag */ "./resources/js/api/resources/user-tag.js");
-/* harmony import */ var _resources_group_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./resources/group-tag */ "./resources/js/api/resources/group-tag.js");
-/* harmony import */ var _resources_role_tag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./resources/role-tag */ "./resources/js/api/resources/role-tag.js");
-/* harmony import */ var _resources_position_tag__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./resources/position-tag */ "./resources/js/api/resources/position-tag.js");
-/* harmony import */ var _resources_user_tag_category__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./resources/user-tag-category */ "./resources/js/api/resources/user-tag-category.js");
-/* harmony import */ var _resources_group_tag_category__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./resources/group-tag-category */ "./resources/js/api/resources/group-tag-category.js");
-/* harmony import */ var _resources_role_tag_category__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./resources/role-tag-category */ "./resources/js/api/resources/role-tag-category.js");
-/* harmony import */ var _resources_position_tag_category__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./resources/position-tag-category */ "./resources/js/api/resources/position-tag-category.js");
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-
-
-
-
-
-
-
-
-
-
-
- // TODO Implement Cache
-
-var _default =
-/*#__PURE__*/
-function () {
-  function _default(baseUrl, axios) {
-    _classCallCheck(this, _default);
-
-    this._http = axios.create({
-      baseURL: baseUrl,
-      withCredentials: true,
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      }
-    });
-  }
-
-  _createClass(_default, [{
-    key: "group",
-    value: function group() {
-      return new _resources_group__WEBPACK_IMPORTED_MODULE_0__["default"](this._http);
-    }
-  }, {
-    key: "user",
-    value: function user() {
-      return new _resources_user__WEBPACK_IMPORTED_MODULE_1__["default"](this._http);
-    }
-  }, {
-    key: "role",
-    value: function role() {
-      return new _resources_role__WEBPACK_IMPORTED_MODULE_2__["default"](this._http);
-    }
-  }, {
-    key: "position",
-    value: function position() {
-      return new _resources_position__WEBPACK_IMPORTED_MODULE_3__["default"](this._http);
-    }
-  }, {
-    key: "userTag",
-    value: function userTag() {
-      return new _resources_user_tag__WEBPACK_IMPORTED_MODULE_4__["default"](this._http);
-    }
-  }, {
-    key: "groupTag",
-    value: function groupTag() {
-      return new _resources_group_tag__WEBPACK_IMPORTED_MODULE_5__["default"](this._http);
-    }
-  }, {
-    key: "roleTag",
-    value: function roleTag() {
-      return new _resources_role_tag__WEBPACK_IMPORTED_MODULE_6__["default"](this._http);
-    }
-  }, {
-    key: "positionTag",
-    value: function positionTag() {
-      return new _resources_position_tag__WEBPACK_IMPORTED_MODULE_7__["default"](this._http);
-    }
-  }, {
-    key: "userTagCategory",
-    value: function userTagCategory() {
-      return new _resources_user_tag_category__WEBPACK_IMPORTED_MODULE_8__["default"](this._http);
-    }
-  }, {
-    key: "groupTagCategory",
-    value: function groupTagCategory() {
-      return new _resources_group_tag_category__WEBPACK_IMPORTED_MODULE_9__["default"](this._http);
-    }
-  }, {
-    key: "roleTagCategory",
-    value: function roleTagCategory() {
-      return new _resources_role_tag_category__WEBPACK_IMPORTED_MODULE_10__["default"](this._http);
-    }
-  }, {
-    key: "positionTagCategory",
-    value: function positionTagCategory() {
-      return new _resources_position_tag_category__WEBPACK_IMPORTED_MODULE_11__["default"](this._http);
-    }
-  }]);
-
-  return _default;
-}();
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/baseresource.js":
-/*!******************************************!*\
-  !*** ./resources/js/api/baseresource.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var _default =
-/*#__PURE__*/
-function () {
-  function _default(client) {
-    _classCallCheck(this, _default);
-
-    this._client = client;
-  }
-
-  _createClass(_default, [{
-    key: "request",
-    value: function request(method, url, body, params) {
-      return this._client.request({
-        url: url,
-        method: method,
-        data: body,
-        params: params
-      });
-    }
-  }]);
-
-  return _default;
-}();
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/group-tag-category.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/api/resources/group-tag-category.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/group-tag-category');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(groupTagCategoryId) {
-      return this.request('delete', '/group-tag-category/' + groupTagCategoryId);
-    }
-  }, {
-    key: "get",
-    value: function get(groupTagCategoryId) {
-      return this.request('get', '/group-tag-category/' + groupTagCategoryId);
-    }
-  }, {
-    key: "update",
-    value: function update(groupTagCategoryId, attributes) {
-      return this.request('patch', '/group-tag-category/' + groupTagCategoryId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/group-tag-category', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(groupTagCategoryId) {
-      return this.request('get', '/group-tag-category/' + groupTagCategoryId + '/group-tag');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/group-tag.js":
-/*!*************************************************!*\
-  !*** ./resources/js/api/resources/group-tag.js ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/group-tag');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(groupTagId) {
-      return this.request('delete', '/group-tag/' + groupTagId);
-    }
-  }, {
-    key: "get",
-    value: function get(groupTagId) {
-      return this.request('get', '/group-tag/' + groupTagId);
-    }
-  }, {
-    key: "update",
-    value: function update(groupTagId, attributes) {
-      return this.request('patch', '/group-tag/' + groupTagId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/group-tag', attributes);
-    }
-  }, {
-    key: "groups",
-    value: function groups(groupTagId) {
-      return this.request('get', '/group-tag/' + groupTagId + '/group');
-    }
-  }, {
-    key: "tagGroup",
-    value: function tagGroup(groupTagId, groupId) {
-      return this.request('patch', '/group-tag/' + groupTagId + '/group/' + groupId);
-    }
-  }, {
-    key: "untagGroup",
-    value: function untagGroup(groupTagId, groupId) {
-      return this.request('delete', '/group-tag/' + groupTagId + '/group/' + groupId);
-    }
-  }, {
-    key: "category",
-    value: function category(groupTagId) {
-      return this.request('get', '/group-tag/' + groupTagId + '/group-tag-category');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/group.js":
-/*!*********************************************!*\
-  !*** ./resources/js/api/resources/group.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/group');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(groupId) {
-      return this.request('delete', '/group/' + groupId);
-    }
-  }, {
-    key: "get",
-    value: function get(groupId) {
-      return this.request('get', '/group/' + groupId);
-    }
-  }, {
-    key: "update",
-    value: function update(groupId, attributes) {
-      return this.request('patch', '/group/' + groupId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/group', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(groupId) {
-      return this.request('get', '/group/' + groupId + '/tag');
-    }
-  }, {
-    key: "tag",
-    value: function tag(groupId, tagId) {
-      return this.request('patch', '/group/' + groupId + '/tag/' + tagId);
-    }
-  }, {
-    key: "untag",
-    value: function untag(groupId, tagId) {
-      return this.request('delete', '/group/' + groupId + '/tag/' + tagId);
-    }
-  }, {
-    key: "users",
-    value: function users(groupId) {
-      return this.request('get', '/group/' + groupId + '/user');
-    }
-  }, {
-    key: "addUser",
-    value: function addUser(groupId, userId) {
-      return this.request('patch', '/group/' + groupId + '/user/' + userId);
-    }
-  }, {
-    key: "removeUser",
-    value: function removeUser(groupId, userId) {
-      return this.request('delete', '/group/' + groupId + '/user/' + userId);
-    }
-  }, {
-    key: "roles",
-    value: function roles(groupId) {
-      return this.request('get', '/group/' + groupId + '/role');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/position-tag-category.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/api/resources/position-tag-category.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/position-tag-category');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(positionTagCategoryId) {
-      return this.request('delete', '/position-tag-category/' + positionTagCategoryId);
-    }
-  }, {
-    key: "get",
-    value: function get(positionTagCategoryId) {
-      return this.request('get', '/position-tag-category/' + positionTagCategoryId);
-    }
-  }, {
-    key: "update",
-    value: function update(positionTagCategoryId, attributes) {
-      return this.request('patch', '/position-tag-category/' + positionTagCategoryId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/position-tag-category', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(positionTagCategoryId) {
-      return this.request('get', '/position-tag-category/' + positionTagCategoryId + '/position-tag');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/position-tag.js":
-/*!****************************************************!*\
-  !*** ./resources/js/api/resources/position-tag.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/position-tag');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(positionTagId) {
-      return this.request('delete', '/position-tag/' + positionTagId);
-    }
-  }, {
-    key: "get",
-    value: function get(positionTagId) {
-      return this.request('get', '/position-tag/' + positionTagId);
-    }
-  }, {
-    key: "update",
-    value: function update(positionTagId, attributes) {
-      return this.request('patch', '/position-tag/' + positionTagId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/position-tag', attributes);
-    }
-  }, {
-    key: "positions",
-    value: function positions(positionTagId) {
-      return this.request('get', '/position-tag/' + positionTagId + '/position');
-    }
-  }, {
-    key: "tagPosition",
-    value: function tagPosition(positionTagId, positionId) {
-      return this.request('patch', '/position-tag/' + positionTagId + '/position/' + positionId);
-    }
-  }, {
-    key: "untagPosition",
-    value: function untagPosition(positionTagId, positionId) {
-      return this.request('delete', '/position-tag/' + positionTagId + '/position/' + positionId);
-    }
-  }, {
-    key: "category",
-    value: function category(positionTagId) {
-      return this.request('get', '/position-tag/' + positionTagId + '/position-tag-category');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/position.js":
-/*!************************************************!*\
-  !*** ./resources/js/api/resources/position.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/position');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(positionId) {
-      return this.request('delete', '/position/' + positionId);
-    }
-  }, {
-    key: "get",
-    value: function get(positionId) {
-      return this.request('get', '/position/' + positionId);
-    }
-  }, {
-    key: "update",
-    value: function update(positionId, attributes) {
-      return this.request('patch', '/position/' + positionId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/position', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(positionId) {
-      return this.request('get', '/position/' + positionId + '/tag');
-    }
-  }, {
-    key: "tag",
-    value: function tag(positionId, tagId) {
-      return this.request('patch', '/position/' + positionId + '/tag/' + tagId);
-    }
-  }, {
-    key: "untag",
-    value: function untag(positionId, tagId) {
-      return this.request('delete', '/position/' + positionId + '/tag/' + tagId);
-    }
-  }, {
-    key: "roles",
-    value: function roles(positionId) {
-      return this.request('get', '/position/' + positionId + '/role');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/role-tag-category.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/api/resources/role-tag-category.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/role-tag-category');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(roleTagCategoryId) {
-      return this.request('delete', '/role-tag-category/' + roleTagCategoryId);
-    }
-  }, {
-    key: "get",
-    value: function get(roleTagCategoryId) {
-      return this.request('get', '/role-tag-category/' + roleTagCategoryId);
-    }
-  }, {
-    key: "update",
-    value: function update(roleTagCategoryId, attributes) {
-      return this.request('patch', '/role-tag-category/' + roleTagCategoryId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/role-tag-category', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(roleTagCategoryId) {
-      return this.request('get', '/role-tag-category/' + roleTagCategoryId + '/role-tag');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/role-tag.js":
-/*!************************************************!*\
-  !*** ./resources/js/api/resources/role-tag.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/role-tag');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(roleTagId) {
-      return this.request('delete', '/role-tag/' + roleTagId);
-    }
-  }, {
-    key: "get",
-    value: function get(roleTagId) {
-      return this.request('get', '/role-tag/' + roleTagId);
-    }
-  }, {
-    key: "update",
-    value: function update(roleTagId, attributes) {
-      return this.request('patch', '/role-tag/' + roleTagId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/role-tag', attributes);
-    }
-  }, {
-    key: "roles",
-    value: function roles(roleTagId) {
-      return this.request('get', '/role-tag/' + roleTagId + '/role');
-    }
-  }, {
-    key: "tagRole",
-    value: function tagRole(roleTagId, roleId) {
-      return this.request('patch', '/role-tag/' + roleTagId + '/role/' + roleId);
-    }
-  }, {
-    key: "untagRole",
-    value: function untagRole(roleTagId, roleId) {
-      return this.request('delete', '/role-tag/' + roleTagId + '/role/' + roleId);
-    }
-  }, {
-    key: "category",
-    value: function category(roleTagId) {
-      return this.request('get', '/role-tag/' + roleTagId + '/role-tag-category');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/role.js":
-/*!********************************************!*\
-  !*** ./resources/js/api/resources/role.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/role');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(roleId) {
-      return this.request('delete', '/role/' + roleId);
-    }
-  }, {
-    key: "get",
-    value: function get(roleId) {
-      return this.request('get', '/role/' + roleId);
-    }
-  }, {
-    key: "update",
-    value: function update(roleId, attributes) {
-      return this.request('patch', '/role/' + roleId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/role', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(roleId) {
-      return this.request('get', '/role/' + roleId + '/tag');
-    }
-  }, {
-    key: "tag",
-    value: function tag(roleId, tagId) {
-      return this.request('patch', '/role/' + roleId + '/tag/' + tagId);
-    }
-  }, {
-    key: "untag",
-    value: function untag(roleId, tagId) {
-      return this.request('delete', '/role/' + roleId + '/tag/' + tagId);
-    }
-  }, {
-    key: "users",
-    value: function users(roleId) {
-      return this.request('get', '/role/' + roleId + '/user');
-    }
-  }, {
-    key: "addUser",
-    value: function addUser(roleId, userId) {
-      return this.request('patch', '/role/' + roleId + '/user/' + userId);
-    }
-  }, {
-    key: "removeUser",
-    value: function removeUser(roleId, userId) {
-      return this.request('delete', '/role/' + roleId + '/user/' + userId);
-    }
-  }, {
-    key: "group",
-    value: function group(roleId) {
-      return this.request('get', '/role/' + roleId + '/group');
-    }
-  }, {
-    key: "position",
-    value: function position(roleId) {
-      return this.request('get', '/role/' + roleId + '/position');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/user-tag-category.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/api/resources/user-tag-category.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/user-tag-category');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(userTagCategoryId) {
-      return this.request('delete', '/user-tag-category/' + userTagCategoryId);
-    }
-  }, {
-    key: "get",
-    value: function get(userTagCategoryId) {
-      return this.request('get', '/user-tag-category/' + userTagCategoryId);
-    }
-  }, {
-    key: "update",
-    value: function update(userTagCategoryId, attributes) {
-      return this.request('patch', '/user-tag-category/' + userTagCategoryId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/user-tag-category', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(userTagCategoryId) {
-      return this.request('get', '/user-tag-category/' + userTagCategoryId + '/user-tag');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/user-tag.js":
-/*!************************************************!*\
-  !*** ./resources/js/api/resources/user-tag.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/user-tag');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(userTagId) {
-      return this.request('delete', '/user-tag/' + userTagId);
-    }
-  }, {
-    key: "get",
-    value: function get(userTagId) {
-      return this.request('get', '/user-tag/' + userTagId);
-    }
-  }, {
-    key: "update",
-    value: function update(userTagId, attributes) {
-      return this.request('patch', '/user-tag/' + userTagId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/user-tag', attributes);
-    }
-  }, {
-    key: "users",
-    value: function users(userTagId) {
-      return this.request('get', '/user-tag/' + userTagId + '/user');
-    }
-  }, {
-    key: "tagUser",
-    value: function tagUser(userTagId, userId) {
-      return this.request('patch', '/user-tag/' + userTagId + '/user/' + userId);
-    }
-  }, {
-    key: "untagUser",
-    value: function untagUser(userTagId, userId) {
-      return this.request('delete', '/user-tag/' + userTagId + '/user/' + userId);
-    }
-  }, {
-    key: "category",
-    value: function category(userTagId) {
-      return this.request('get', '/user-tag/' + userTagId + '/user-tag-category');
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
-/***/ "./resources/js/api/resources/user.js":
-/*!********************************************!*\
-  !*** ./resources/js/api/resources/user.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _baseresource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../baseresource */ "./resources/js/api/baseresource.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var _default =
-/*#__PURE__*/
-function (_BaseResource) {
-  _inherits(_default, _BaseResource);
-
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "all",
-    value: function all() {
-      return this.request('get', '/user');
-    }
-  }, {
-    key: "delete",
-    value: function _delete(userId) {
-      return this.request('delete', '/user/' + userId);
-    }
-  }, {
-    key: "get",
-    value: function get(userId) {
-      return this.request('get', '/user/' + userId);
-    }
-  }, {
-    key: "update",
-    value: function update(userId, attributes) {
-      return this.request('patch', '/user/' + userId, attributes);
-    }
-  }, {
-    key: "create",
-    value: function create(attributes) {
-      return this.request('post', '/user', attributes);
-    }
-  }, {
-    key: "tags",
-    value: function tags(userId) {
-      return this.request('get', '/user/' + userId + '/tag');
-    }
-  }, {
-    key: "tag",
-    value: function tag(userId, tagId) {
-      return this.request('patch', '/user/' + userId + '/tag/' + tagId);
-    }
-  }, {
-    key: "untag",
-    value: function untag(userId, tagId) {
-      return this.request('delete', '/user/' + userId + '/tag/' + tagId);
-    }
-  }, {
-    key: "roles",
-    value: function roles(userId) {
-      return this.request('get', '/user/' + userId + '/role');
-    }
-  }, {
-    key: "addRole",
-    value: function addRole(userId, roleId) {
-      return this.request('patch', '/user/' + userId + '/role/' + roleId);
-    }
-  }, {
-    key: "removeRole",
-    value: function removeRole(userId, roleId) {
-      return this.request('delete', '/user/' + userId + '/role/' + roleId);
-    }
-  }, {
-    key: "groups",
-    value: function groups(userId) {
-      return this.request('get', '/user/' + userId + '/group');
-    }
-  }, {
-    key: "addGroup",
-    value: function addGroup(userId, groupId) {
-      return this.request('patch', '/user/' + userId + '/group/' + groupId);
-    }
-  }, {
-    key: "removeGroup",
-    value: function removeGroup(userId, groupId) {
-      return this.request('delete', '/user/' + userId + '/group/' + groupId);
-    }
-  }]);
-
-  return _default;
-}(_baseresource__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-
-/***/ }),
-
 /***/ "./resources/js/components/group/index/Edit.vue":
 /*!******************************************************!*\
   !*** ./resources/js/components/group/index/Edit.vue ***!
@@ -90852,7 +90747,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Edit_vue_vue_type_template_id_45419972___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Edit.vue?vue&type=template&id=45419972& */ "./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&");
+/* harmony import */ var _Edit_vue_vue_type_template_id_45419972_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Edit.vue?vue&type=template&id=45419972&scoped=true& */ "./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&scoped=true&");
 /* harmony import */ var _Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Edit.vue?vue&type=script&lang=js& */ "./resources/js/components/position/index/Edit.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -90864,11 +90759,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Edit_vue_vue_type_template_id_45419972___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Edit_vue_vue_type_template_id_45419972___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Edit_vue_vue_type_template_id_45419972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Edit_vue_vue_type_template_id_45419972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "45419972",
   null
   
 )
@@ -90894,19 +90789,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972& ***!
-  \****************************************************************************************/
+/***/ "./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&scoped=true&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&scoped=true& ***!
+  \****************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_45419972___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Edit.vue?vue&type=template&id=45419972& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_45419972___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_45419972_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Edit.vue?vue&type=template&id=45419972&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/position/index/Edit.vue?vue&type=template&id=45419972&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_45419972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_45419972___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_45419972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -91261,15 +91156,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************!*\
   !*** ./resources/js/components/role/index/Edit.vue ***!
   \*****************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Edit_vue_vue_type_template_id_8ccf65f6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Edit.vue?vue&type=template&id=8ccf65f6&scoped=true& */ "./resources/js/components/role/index/Edit.vue?vue&type=template&id=8ccf65f6&scoped=true&");
 /* harmony import */ var _Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Edit.vue?vue&type=script&lang=js& */ "./resources/js/components/role/index/Edit.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -91299,7 +91193,7 @@ component.options.__file = "resources/js/components/role/index/Edit.vue"
 /*!******************************************************************************!*\
   !*** ./resources/js/components/role/index/Edit.vue?vue&type=script&lang=js& ***!
   \******************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91322,6 +91216,76 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_8ccf65f6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_8ccf65f6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/role/index/GroupIdSelector.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/role/index/GroupIdSelector.vue ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GroupIdSelector_vue_vue_type_template_id_517b8a64___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GroupIdSelector.vue?vue&type=template&id=517b8a64& */ "./resources/js/components/role/index/GroupIdSelector.vue?vue&type=template&id=517b8a64&");
+/* harmony import */ var _GroupIdSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GroupIdSelector.vue?vue&type=script&lang=js& */ "./resources/js/components/role/index/GroupIdSelector.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _GroupIdSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _GroupIdSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GroupIdSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GroupIdSelector_vue_vue_type_template_id_517b8a64___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GroupIdSelector_vue_vue_type_template_id_517b8a64___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/role/index/GroupIdSelector.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/role/index/GroupIdSelector.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/role/index/GroupIdSelector.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupIdSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./GroupIdSelector.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/index/GroupIdSelector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupIdSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/role/index/GroupIdSelector.vue?vue&type=template&id=517b8a64&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/role/index/GroupIdSelector.vue?vue&type=template&id=517b8a64& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupIdSelector_vue_vue_type_template_id_517b8a64___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./GroupIdSelector.vue?vue&type=template&id=517b8a64& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/index/GroupIdSelector.vue?vue&type=template&id=517b8a64&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupIdSelector_vue_vue_type_template_id_517b8a64___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupIdSelector_vue_vue_type_template_id_517b8a64___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -91391,6 +91355,213 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_89ade532_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_89ade532_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/RoleDetails.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/role/show/RoleDetails.vue ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _RoleDetails_vue_vue_type_template_id_00b5e310_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true& */ "./resources/js/components/role/show/RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true&");
+/* harmony import */ var _RoleDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RoleDetails.vue?vue&type=script&lang=js& */ "./resources/js/components/role/show/RoleDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _RoleDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _RoleDetails_vue_vue_type_template_id_00b5e310_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _RoleDetails_vue_vue_type_template_id_00b5e310_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "00b5e310",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/role/show/RoleDetails.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/RoleDetails.vue?vue&type=script&lang=js&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/role/show/RoleDetails.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RoleDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./RoleDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/RoleDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RoleDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/role/show/RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true& ***!
+  \******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RoleDetails_vue_vue_type_template_id_00b5e310_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/RoleDetails.vue?vue&type=template&id=00b5e310&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RoleDetails_vue_vue_type_template_id_00b5e310_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RoleDetails_vue_vue_type_template_id_00b5e310_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/Show.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/role/show/Show.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Show_vue_vue_type_template_id_4a4b8ebe_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Show.vue?vue&type=template&id=4a4b8ebe&scoped=true& */ "./resources/js/components/role/show/Show.vue?vue&type=template&id=4a4b8ebe&scoped=true&");
+/* harmony import */ var _Show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Show.vue?vue&type=script&lang=js& */ "./resources/js/components/role/show/Show.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Show_vue_vue_type_template_id_4a4b8ebe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Show_vue_vue_type_template_id_4a4b8ebe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "4a4b8ebe",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/role/show/Show.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/Show.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/role/show/Show.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Show.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Show.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/Show.vue?vue&type=template&id=4a4b8ebe&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/role/show/Show.vue?vue&type=template&id=4a4b8ebe&scoped=true& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Show_vue_vue_type_template_id_4a4b8ebe_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Show.vue?vue&type=template&id=4a4b8ebe&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Show.vue?vue&type=template&id=4a4b8ebe&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Show_vue_vue_type_template_id_4a4b8ebe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Show_vue_vue_type_template_id_4a4b8ebe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/Tags.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/role/show/Tags.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Tags_vue_vue_type_template_id_7adeb886_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Tags.vue?vue&type=template&id=7adeb886&scoped=true& */ "./resources/js/components/role/show/Tags.vue?vue&type=template&id=7adeb886&scoped=true&");
+/* harmony import */ var _Tags_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tags.vue?vue&type=script&lang=js& */ "./resources/js/components/role/show/Tags.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Tags_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Tags_vue_vue_type_template_id_7adeb886_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Tags_vue_vue_type_template_id_7adeb886_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "7adeb886",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/role/show/Tags.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/Tags.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/role/show/Tags.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Tags_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Tags.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Tags.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Tags_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/role/show/Tags.vue?vue&type=template&id=7adeb886&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/role/show/Tags.vue?vue&type=template&id=7adeb886&scoped=true& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tags_vue_vue_type_template_id_7adeb886_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Tags.vue?vue&type=template&id=7adeb886&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/role/show/Tags.vue?vue&type=template&id=7adeb886&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tags_vue_vue_type_template_id_7adeb886_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tags_vue_vue_type_template_id_7adeb886_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -91480,7 +91651,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/api */ "./resources/js/api/api.js");
+/* harmony import */ var _bristol_su_control_js_api_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @bristol-su/control-js-api-client */ "./node_modules/@bristol-su/control-js-api-client/index.js");
 /* harmony import */ var awesome_notifications__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! awesome-notifications */ "./node_modules/awesome-notifications/dist/index.js");
 /* harmony import */ var awesome_notifications__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(awesome_notifications__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
@@ -91489,12 +91660,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_position_index_Index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/position/index/Index */ "./resources/js/components/position/index/Index.vue");
 /* harmony import */ var _components_position_show_Show__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/position/show/Show */ "./resources/js/components/position/show/Show.vue");
 /* harmony import */ var _components_role_index_Index__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/role/index/Index */ "./resources/js/components/role/index/Index.vue");
+/* harmony import */ var _components_role_show_Show__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/role/show/Show */ "./resources/js/components/role/show/Show.vue");
 
 
 
 
 
  // Import Vue Components
+
 
 
 
@@ -91513,7 +91686,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$notify = new awesome_notif
   position: 'top-right'
 });
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$http = axios__WEBPACK_IMPORTED_MODULE_1___default.a;
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$control = new _api_api__WEBPACK_IMPORTED_MODULE_3__["default"](apiUrl, axios__WEBPACK_IMPORTED_MODULE_1___default.a);
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$control = new _bristol_su_control_js_api_client__WEBPACK_IMPORTED_MODULE_3__["default"](apiUrl, axios__WEBPACK_IMPORTED_MODULE_1___default.a);
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["default"]); // Register Vue components
 
 new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
@@ -91524,7 +91697,8 @@ new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
     GroupShow: _components_group_show_Show__WEBPACK_IMPORTED_MODULE_7__["default"],
     PositionIndex: _components_position_index_Index__WEBPACK_IMPORTED_MODULE_8__["default"],
     PositionShow: _components_position_show_Show__WEBPACK_IMPORTED_MODULE_9__["default"],
-    RoleIndex: _components_role_index_Index__WEBPACK_IMPORTED_MODULE_10__["default"]
+    RoleIndex: _components_role_index_Index__WEBPACK_IMPORTED_MODULE_10__["default"],
+    RoleShow: _components_role_show_Show__WEBPACK_IMPORTED_MODULE_11__["default"]
   }
 });
 

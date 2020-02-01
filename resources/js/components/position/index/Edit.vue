@@ -13,14 +13,11 @@
             <b-form-group
                 id="position-description-group"
                 label="Description:"
-                label-for="description"
-                v-model="form.description"
-                description="Provide a description for the position"
+                label-for="position-description"
             >
                 <b-form-input
-                    id="description"
+                    id="position-description"
                     v-model="form.description"
-                    type="text"
                     placeholder="Enter a description"
                 />
             </b-form-group>
@@ -29,6 +26,7 @@
         </b-form>
     </div>
 </template>
+
 
 <script>
     export default {
@@ -69,7 +67,7 @@
                 if(this.position !== null) {
                     this.form.description = this.position.data.description;
                     this.form.name = this.position.data.name;
-                } 
+                }
             },
 
             savePosition() {
@@ -96,3 +94,6 @@
     }
 </script>
 
+<style scoped>
+
+</style>
