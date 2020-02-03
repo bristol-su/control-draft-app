@@ -1,7 +1,7 @@
 <template>
     <div>
         <data-item title="Id">{{role.id}}</data-item>
-        <data-item title="Position Name">{{role.data.position_name}}</data-item>
+        <data-item title="Name">{{role.data.position_name}}</data-item>
         <data-item title="Group Email">{{role.data.email}}</data-item>
         <data-item title="Last Updated">{{role.updated_at | dateTime}}</data-item>
     </div>

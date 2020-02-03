@@ -22,4 +22,6 @@ Route::namespace('Pages')->group(function() {
 
     Route::get('/role', 'RoleController@index');
     Route::get('/role/{control_role}', 'RoleController@show');
+
+    Route::get('/user', 'UserController@index');
 });

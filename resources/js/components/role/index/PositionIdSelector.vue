@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<b-form-group id="group-group" label="Group:" label-for="group">
+		<b-form-group id="position-group" label="Position:" label-for="position">
             <b-form-select
-                id="group"
-                v-model="group_selected"
+                id="position"
+                v-model="position_selected"
                 @change="onChange($event)"
             >
-            	<option v-for="item in groups" :value="item.data.id" >
+            	<option v-for="item in positions" :value="item.data.id" >
             		{{ item.data.name }}
             	</option>
         	</b-form-select>
@@ -16,7 +16,7 @@
 
 <script>
 	export default {
-		name: "Group-Id-Selector",
+		name: "Position-Id-Selector",
 
 		props: {
 			value: {
@@ -37,8 +37,8 @@
 
 		data() {
 			return {
-				group_selected: null,
-				groups: []
+				position_selected: null,
+				positions: []
 			}
 		},
 
@@ -47,15 +47,15 @@
 		},
 
 		created() {
-			this.$control.group().all()
-                .then(response => this.groups = response.data)
-                .catch(error => this.$notify.alert('Could not load groups'))
+			this.$control.position().all()
+                .then(response => this.positions = response.data)
+                .catch(error => this.$notify.alert('Could not load positions'))
 		},
 
 		methods: {
 			syncValue() {
 				if (this.value !== 0) {
-					this.group_selected = this.value;
+					this.position_selected = this.value;
 				}
 			},
 
