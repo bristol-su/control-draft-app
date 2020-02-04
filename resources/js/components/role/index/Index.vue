@@ -41,7 +41,7 @@
                 editingRole: null,
                 fields: [
                     {key: 'id', label: 'Role ID'},
-                    {key: 'data.position_name', label: 'Name'},
+                    {key: 'data.role_name', label: 'Name'},
                     {key: 'data.email', label: 'Email'},
                     {key: 'actions', label: 'Actions'}
                 ]

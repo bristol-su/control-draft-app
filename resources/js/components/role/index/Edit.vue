@@ -8,7 +8,7 @@
                 label-for="rolename">
                 <b-form-input
                     id="rolename"
-                    v-model="form.position_name"
+                    v-model="form.role_name"
                     type="text" />
             </b-form-group>
 
@@ -64,7 +64,7 @@
             return {
                 form: {
                     position_id: null,
-                    position_name: null,
+                    role_name: null,
                     group_id: null,
                     email: null
                 }
@@ -81,7 +81,7 @@
                     this.form.position_id = this.role.position_id;
                     this.form.group_id = this.role.group_id;
                     this.form.email = this.role.data.email;
-                    this.form.position_name = this.role.data.position_name;
+                    this.form.role_name = this.role.data.role_name;
                 }
             },
 

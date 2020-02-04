@@ -3843,7 +3843,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       form: {
         position_id: null,
-        position_name: null,
+        role_name: null,
         group_id: null,
         email: null
       }
@@ -3858,7 +3858,7 @@ __webpack_require__.r(__webpack_exports__);
         this.form.position_id = this.role.position_id;
         this.form.group_id = this.role.group_id;
         this.form.email = this.role.data.email;
-        this.form.position_name = this.role.data.position_name;
+        this.form.role_name = this.role.data.role_name;
       }
     },
     saveRole: function saveRole() {
@@ -4022,7 +4022,7 @@ __webpack_require__.r(__webpack_exports__);
         key: 'id',
         label: 'Role ID'
       }, {
-        key: 'data.position_name',
+        key: 'data.role_name',
         label: 'Name'
       }, {
         key: 'data.email',
@@ -77779,11 +77779,11 @@ var render = function() {
               _c("b-form-input", {
                 attrs: { id: "rolename", type: "text" },
                 model: {
-                  value: _vm.form.position_name,
+                  value: _vm.form.role_name,
                   callback: function($$v) {
-                    _vm.$set(_vm.form, "position_name", $$v)
+                    _vm.$set(_vm.form, "role_name", $$v)
                   },
-                  expression: "form.position_name"
+                  expression: "form.role_name"
                 }
               })
             ],
@@ -78157,7 +78157,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("data-item", { attrs: { title: "Name" } }, [
-        _vm._v(_vm._s(_vm.role.data.position_name))
+        _vm._v(_vm._s(_vm.role.data.role_name))
       ]),
       _vm._v(" "),
       _c("data-item", { attrs: { title: "Group Email" } }, [
