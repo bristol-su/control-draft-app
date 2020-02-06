@@ -1,19 +1,14 @@
 <template>
     <div>
-
+        Form to create a tag here.
     </div>
 </template>
 
 <script>
     export default {
-        name: "Tags",
+        name: "CreateTag",
 
-        props: {
-            group: {
-                required: true,
-                type: Object
-            }
-        },
+        props: {},
 
         data() {
             return {}

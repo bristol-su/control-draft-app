@@ -18,7 +18,7 @@
 <script>
     import GroupDetails from './GroupDetails';
     import Users from './user/Users';
-    import Tags from './Tags';
+    import Tags from './tag/Tags';
     import Roles from './Roles';
 
     export default {

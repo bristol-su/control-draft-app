@@ -17,6 +17,8 @@ import RoleShow from './components/role/show/Show';
 
 import UserIndex from './components/user/index/Index';
 
+import TagCategoryIndex from './components/tag-category/index/Index';
+
 
 window._ = _;
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -44,6 +46,8 @@ new Vue({
         RoleIndex,
         RoleShow,
 
-        UserIndex
+        UserIndex,
+
+        TagCategoryIndex
     }
 });
