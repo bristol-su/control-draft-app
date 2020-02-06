@@ -3,7 +3,6 @@
         <b-row>
             <b-col cols="2"></b-col>
             <b-col cols="8"><h2 style="text-align: center">Tag Categories</h2></b-col>
-            <b-col cols="2"><b-button size="md" variant="info" @click="createCategory"><i class="fa fa-plus"/> New Category</b-button></b-col>
         </b-row>
         <b-card no-body>
             <b-tabs pills card vertical>
@@ -25,14 +24,19 @@
 </template>
 
 <script>
-    import GroupCategories from './GroupCategories';
-    /*import Users from './user/Users';
-    import Tags from './tag/Tags';
-    import Roles from './Roles';*/
+    import GroupCategories from './Group/GroupCategories';
+    import PositionCategories from './Position/PositionCategories';
+    import RoleCategories from './Role/RoleCategories';
+    import UserCategories from './User/UserCategories';
 
     export default {
         name: "Show",
-        components: {GroupCategories},
+        components: {
+            GroupCategories,
+            PositionCategories,
+            RoleCategories,
+            UserCategories
+        },
 
         data() {
             return {}

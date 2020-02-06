@@ -1,12 +1,13 @@
 <template>
     <div>
         <b-container>
+            <b-button size="md" variant="info" @click="createGroupTagCategory"><i class="fa fa-plus"/> New Category</b-button>
             <b-row>
                 <b-col cols="12">
                     <b-table :fields="fields" :items="groupTagCategories">
                         <template v-slot:cell(actions)="data">
                             <b-button size="sm" variant="outline-info" @click="editGroupTagCategory(data.item)">Edit</b-button>
-                            <a :href="'/tag-category/' + data.item.id"><b-button size="sm" variant="outline-secondary">View</b-button></a>
+                            <a :href="'/tag-category/group/' + data.item.id"><b-button size="sm" variant="outline-secondary">View</b-button></a>
                             <b-button size="sm" variant="outline-danger" @click="deleteGroupTagCategory(data.item)">Delete</b-button>
                         </template>
                     </b-table>
@@ -15,7 +16,7 @@
         </b-container>
 
         <b-modal id="edit-group-tag-category">
-            <edit :tagCategory="editingGroupTagCategory" @input="updatedGroupTagCategory"></edit>
+            <edit :groupTagCategory="editingGroupTagCategory" @input="updatedGroupTagCategory"></edit>
         </b-modal>
     </div>
 </template>

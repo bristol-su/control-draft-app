@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
-use BristolSU\ControlDB\Contracts\Models\GroupTag;
+use BristolSU\ControlDB\Contracts\Models\Tags\GroupTagCategory;
 
 class TagCategoryController extends Controller
 {
@@ -13,9 +13,9 @@ class TagCategoryController extends Controller
         return view('control::pages.tag-category.index');
     }
 
-    public function showGroup(GroupTag $groupTag)
+    public function showGroup(GroupTagCategory $group)
     {
-        return view('control::pages.tag-category.show-group')->with('groupTag', $groupTag);
+        return view('control::pages.tag-category.show')->with('tagCategory', $group)->with('tagType', 'group');
     }
 
 }

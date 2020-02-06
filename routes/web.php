@@ -26,4 +26,5 @@ Route::namespace('Pages')->group(function() {
     Route::get('/user', 'UserController@index');
 
     Route::get('/tag-category', 'TagCategoryController@index');
+    Route::get('/tag-category/group/{control_group_tag_category}', 'TagCategoryController@showGroup');
 });

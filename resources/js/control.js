@@ -18,6 +18,7 @@ import RoleShow from './components/role/show/Show';
 import UserIndex from './components/user/index/Index';
 
 import TagCategoryIndex from './components/tag-category/index/Index';
+import TagCategoryShow from './components/tag-category/show/Show';
 
 
 window._ = _;
@@ -48,6 +49,7 @@ new Vue({
 
         UserIndex,
 
-        TagCategoryIndex
+        TagCategoryIndex,
+        TagCategoryShow
     }
 });
