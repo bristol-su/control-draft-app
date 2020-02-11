@@ -24,7 +24,18 @@ Route::namespace('Pages')->group(function() {
     Route::get('/role/{control_role}', 'RoleController@show');
 
     Route::get('/user', 'UserController@index');
+});
 
-    Route::get('/tag-category', 'TagCategoryController@index');
-    Route::get('/tag-category/group/{control_group_tag_category}', 'TagCategoryController@showGroup');
+Route::namespace('Pages\Tags')->group(function() {
+    Route::get('/group-tag-category', 'GroupTagCategoryController@index');
+    Route::get('/group-tag-category/{control_group_tag_category}', 'GroupTagCategoryController@show');
+
+    Route::get('/position-tag-category', 'PositionTagCategoryController@index');
+    Route::get('/position-tag-category/{control_position_tag_category}', 'PositionTagCategoryController@show');
+
+    Route::get('/role-tag-category', 'RoleTagCategoryController@index');
+    Route::get('/role-tag-category/{control_role_tag_category}', 'RoleTagCategoryController@show');
+
+    Route::get('/user-tag-category', 'UserTagCategoryController@index');
+    Route::get('/user-tag-category/{control_user_tag_category}', 'UserTagCategoryController@show');
 });

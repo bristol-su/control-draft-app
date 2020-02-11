@@ -17,8 +17,17 @@ import RoleShow from './components/role/show/Show';
 
 import UserIndex from './components/user/index/Index';
 
-import TagCategoryIndex from './components/tag-category/index/Index';
-import TagCategoryShow from './components/tag-category/show/Show';
+import GroupTagCategoryIndex from './components/tag-category/group/index/Index';
+import GroupTagCategoryShow from './components/tag-category/group/show/Show';
+
+import PositionTagCategoryIndex from './components/tag-category/position/index/Index';
+import PositionTagCategoryShow from './components/tag-category/position/show/Show';
+
+import RoleTagCategoryIndex from './components/tag-category/role/index/Index';
+import RoleTagCategoryShow from './components/tag-category/role/show/Show';
+
+import UserTagCategoryIndex from './components/tag-category/user/index/Index';
+import UserTagCategoryShow from './components/tag-category/user/show/Show';
 
 
 window._ = _;
@@ -49,7 +58,16 @@ new Vue({
 
         UserIndex,
 
-        TagCategoryIndex,
-        TagCategoryShow
+        GroupTagCategoryIndex,
+        GroupTagCategoryShow,
+
+        PositionTagCategoryIndex,
+        PositionTagCategoryShow,
+
+        RoleTagCategoryIndex,
+        RoleTagCategoryShow,
+
+        UserTagCategoryIndex,
+        UserTagCategoryShow
     }
 });
