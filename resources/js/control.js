@@ -16,6 +16,7 @@ import RoleIndex from './components/role/index/Index';
 import RoleShow from './components/role/show/Show';
 
 import UserIndex from './components/user/index/Index';
+import UserShow from './components/user/show/Show';
 
 import GroupTagCategoryIndex from './components/tag-category/group/index/Index';
 import GroupTagCategoryShow from './components/tag-category/group/show/Show';
@@ -57,6 +58,7 @@ new Vue({
         RoleShow,
 
         UserIndex,
+        UserShow,
 
         GroupTagCategoryIndex,
         GroupTagCategoryShow,

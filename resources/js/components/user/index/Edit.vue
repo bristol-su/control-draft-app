@@ -49,7 +49,7 @@
                 <b-form-input
                     id="user-dob"
                     v-model="form.dob"
-                    type="date"
+                    type="text"
                     placeholder="Enter date of birth"
                 />
             </b-form-group>

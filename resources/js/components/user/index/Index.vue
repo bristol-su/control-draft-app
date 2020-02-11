@@ -42,6 +42,7 @@
                 fields: [
                     {key: 'id', label: 'User ID'},
                     {key: 'data.preferred_name', label: 'Name'},
+                    {key: 'data.email', label: 'Email'},
                     {key: 'actions', label: 'Actions'}
                 ]
             }

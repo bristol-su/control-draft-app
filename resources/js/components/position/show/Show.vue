@@ -14,7 +14,7 @@
 
 <script>
     import PositionDetails from './PositionDetails';
-    import Tags from './Tags';
+    import Tags from './tag/Tags';
     import Roles from './Roles';
 
     export default {

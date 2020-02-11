@@ -14,12 +14,12 @@
 
 <script> 
     import RoleDetails from './RoleDetails';
-    import Tags from './Tags';
-    /*import Roles from './Roles';*/
+    import Tags from './tag/Tags';
+    import Users from './user/Users';
 
     export default {
         name: "Show",
-        components: {RoleDetails, Tags},
+        components: {RoleDetails, Tags, Users},
         props: {
             role: {
                 required: true,

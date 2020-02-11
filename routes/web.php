@@ -24,6 +24,7 @@ Route::namespace('Pages')->group(function() {
     Route::get('/role/{control_role}', 'RoleController@show');
 
     Route::get('/user', 'UserController@index');
+    Route::get('/user/{control_user}', 'UserController@show');
 });
 
 Route::namespace('Pages\Tags')->group(function() {
