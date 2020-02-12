@@ -1,0 +1,40 @@
+<template>
+    <b-container>
+        <b-card no-body>
+            <b-tabs pills card vertical>
+                <b-tab title="Tag Details" active>
+                    <tag-details :tag="tag"></tag-details>
+                </b-tab>
+                <b-tab title="Positions"><positions :tag="tag"></positions></b-tab>
+            </b-tabs>
+        </b-card>
+    </b-container>
+</template>
+
+<script> 
+    import TagDetails from './TagDetails';
+    import Positions from './position/Positions';
+
+    export default {
+        name: "Show",
+        components: {TagDetails, Positions},
+        props: {
+            tag: {
+                required: true,
+                type: Object
+            }
+        },
+
+        data() {
+            return {}
+        },
+
+        methods: {},
+
+        computed: {}
+    }
+</script>
+
+<style scoped>
+
+</style>

@@ -11,7 +11,7 @@
         <b-table :fields="fields" :items="tags">
 
             <template v-slot:cell(actions)="data">
-                <a :href="'/tag/' + data.item.id"><b-button size="sm" variant="outline-secondary">View</b-button></a>
+                <a :href="'/group-tag/' + data.item.id"><b-button size="sm" variant="outline-secondary">View</b-button></a>
                 <b-button size="sm" variant="outline-danger" @click="removeTag(data.item)">Delete</b-button>
             </template>
         </b-table>

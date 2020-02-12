@@ -9,7 +9,7 @@
                     <b-table :fields="fields" :items="tags">
                         <template v-slot:cell(actions)="data">
                             <b-button size="sm" variant="outline-info" @click="editTag(data.item)">Edit</b-button>
-                            <a :href="'/tag/' + data.item.id"><b-button size="sm" variant="outline-secondary">View</b-button></a>
+                            <a :href="'/position-tag/' + data.item.id"><b-button size="sm" variant="outline-secondary">View</b-button></a>
                             <b-button size="sm" variant="outline-danger" @click="deleteTag(data.item)">Delete</b-button>
                         </template>
                     </b-table>

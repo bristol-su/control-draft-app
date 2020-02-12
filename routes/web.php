@@ -28,14 +28,30 @@ Route::namespace('Pages')->group(function() {
 });
 
 Route::namespace('Pages\Tags')->group(function() {
+    // group tags
+    Route::get('/group-tag', 'GroupTagController@index');
+    Route::get('/group-tag/{control_group_tag}', 'GroupTagController@show');
+
     Route::get('/group-tag-category', 'GroupTagCategoryController@index');
     Route::get('/group-tag-category/{control_group_tag_category}', 'GroupTagCategoryController@show');
+
+    // position tags
+    Route::get('/position-tag', 'PositionTagController@index');
+    Route::get('/position-tag/{control_position_tag}', 'PositionTagController@show');
 
     Route::get('/position-tag-category', 'PositionTagCategoryController@index');
     Route::get('/position-tag-category/{control_position_tag_category}', 'PositionTagCategoryController@show');
 
+    // role tags
+    Route::get('/role-tag', 'RoleTagController@index');
+    Route::get('/role-tag/{control_role_tag}', 'RoleTagController@show');
+
     Route::get('/role-tag-category', 'RoleTagCategoryController@index');
     Route::get('/role-tag-category/{control_role_tag_category}', 'RoleTagCategoryController@show');
+
+    // user tags
+    Route::get('/user-tag', 'UserTagController@index');
+    Route::get('/user-tag/{control_user_tag}', 'UserTagController@show');
 
     Route::get('/user-tag-category', 'UserTagCategoryController@index');
     Route::get('/user-tag-category/{control_user_tag_category}', 'UserTagCategoryController@show');
